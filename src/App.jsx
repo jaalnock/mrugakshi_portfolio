@@ -396,7 +396,7 @@ const App = () => {
                 animate={{ opacity: 1 }}
                 className="w-full h-full overflow-y-scroll hide-scrollbar p-4"
               >
-                <div className="mb-6 text-left">
+                <div className="mb-6 mt-6 text-left">
                   <div className="flex items-center gap-4">
                     <button
                       onClick={resetView}
