@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { BsPlayCircle } from "react-icons/bs";
 import { FiInstagram, FiMail, FiPhone } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
@@ -219,150 +219,171 @@ const App = () => {
       {/* Inline styles for custom CSS */}
       <style>
         {`
-        .hide-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
-        .hide-scrollbar {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-      
-        .project-timeline-heading {
-          position: absolute;
-          top: 15vh;
-          right: 2vw;
-          color: #E45310;
-          font-size: 4vw;
-          font-weight: 800;
-          line-height: 1.4;
-          letter-spacing: 0.01vw;
-          font-family: 'Poppins', sans-serif;
-          text-align: left;
-        }
-      
-        .timeline-section {
-          position: relative;
-          top: 7vh;
-        }
-      
-        .vertical-strip {
-          position: fixed;
-          left: 43.2%;
-          top: 0;
-          bottom: 0;
-          width: 6.5vw;
-          height: 100%;
-          background-color: #E45310;
-          z-index: 0;
-          transform: translateX(-50%);
-        }
-      
-        .project-number {
-          color: #FF554B;
-          font-size: 3.5vw;
-          font-weight: bold;
-          width: 7vw;
-          text-align: center;
-          position: relative;
-          z-index: 2;
-          transition: color 0.3s ease;
-        }
-      
-        .project-number.selected {
-          color: white;
-        }
+          .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+          }
+          .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+          }
 
-        .project-details {
-          padding-left: 1.5vw;
-          transition: transform 0.3s ease;
-          color: #F5F5F5;
-          margin-left: 1vw;
-        }
-      
-        .project-details.selected {
-          color: white;
-        }
-      
-        .project-item {
-          display: flex;
-          align-items: flex-start;
-          position: relative;
-        }
-      
-        .project-item:hover .project-details {
-          transform: scale(1.02);
-        }
-      
-        .contact-info {
-          display: flex;
-          flex-direction: column;
-          gap: 12px;
-          margin-top: 20vh;
-          margin-left: 3vw;
-        }
-      
-        .contact-item {
-          display: flex;
-          align-items: center;
-          gap: 12px;
-          color: #000000;
-          font-size: 14px;
-          text-decoration: none;
-        }
-      
-        .contact-item svg {
-          font-size: 18px;
-          color: #E45310;
-        }
+          .project-timeline-heading {
+            position: absolute;
+            top: 15vh;
+            right: 2vw;
+            color: #E45310;
+            font-size: 4vw;
+            font-weight: 800;
+            line-height: 1.4;
+            letter-spacing: 0.01vw;
+            font-family: 'Poppins', sans-serif;
+            text-align: left;
+          }
 
-        .nav-button {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          background-color: #E45310;
-          color: white;
-          border: none;
-          border-radius: 50%;
-          width: 4vw;
-          height: 4vw;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          cursor: pointer;
-          transition: background-color 0.3s ease;
-          z-index: 10;
-          font-weight: bold;
-          font-size: 2.4vw;
-        }
+          .timeline-section {
+            position: relative;
+            top: 7vh;
+          }
 
-        .nav-button:hover {
-          background-color: #e44d00;
-        }
+          .vertical-strip {
+            position: fixed;
+            left: 43.2%;
+            top: 0;
+            bottom: 0;
+            width: 6.5vw;
+            height: 100%;
+            background-color: #E45310;
+            z-index: 0;
+            transform: translateX(-50%);
+          }
 
-        .nav-button.left {
-          left: -100px;
-        }
+          @keyframes stripColorChange {
+            from {
+              background-color: #fff;
+            }
+            to {
+              background-color: #E45310;
+            }
+          }
 
-        .nav-button.right {
-          right: -100px;
-        }
+          .project-number {
+            color: #FF554B;
+            font-size: 3.5vw;
+            font-weight: bold;
+            width: 7vw;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            transition: color 0.3s ease;
+          }
 
-        .nav-button svg {
-          font-size: 34px;
-        }
-      `}
+          .project-number.selected {
+            color: white;
+          }
+
+          .project-details {
+            padding-left: 1.5vw;
+            transition: transform 0.3s ease;
+            color: #F5F5F5;
+            margin-left: 1vw;
+          }
+
+          .project-details.selected {
+            color: white;
+          }
+
+          .project-item {
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+          }
+
+          .project-item:hover .project-details {
+            transform: scale(1.02);
+          }
+
+          .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 20vh;
+            margin-left: 3vw;
+          }
+
+          .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #000000;
+            font-size: 14px;
+            text-decoration: none;
+          }
+
+          .contact-item svg {
+            font-size: 18px;
+            color: #E45310;
+          }
+
+          .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #E45310;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 4vw;
+            height: 4vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            z-index: 10;
+            font-weight: bold;
+            font-size: 2.4vw;
+          }
+
+          .nav-button:hover {
+            background-color: #e44d00;
+          }
+
+          .nav-button.left {
+            left: -100px;
+          }
+
+          .nav-button.right {
+            right: -100px;
+          }
+
+          .nav-button svg {
+            font-size: 34px;
+          }
+        `}
       </style>
 
       {/* Main container */}
       <div className="h-screen overflow-hidden font-sans text-gray-800">
-        {/* Header section */}
-        <header
+        {/* Header section with animation */}
+        <motion.header
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           onClick={resetView}
           className="flex justify-between items-start p-6 bg-white border-b-2 border-[#E45310] fixed w-full top-0 z-50 cursor-pointer"
         >
           <div className="pl-7 pt-4">
             <h1 className="text-3xl font-bold text-[#E45310]">
-              Mrugakshi Nadkarni
+              {Array.from("Mrugakshi Nadkarni").map((char, index) => (
+                <motion.span
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.1 }}
+                >
+                  {char}
+                </motion.span>
+              ))}
             </h1>
             <p className="text-2xl font-thin text-[#E45310]">
               Design | Space | Creation | Balance
@@ -383,132 +404,149 @@ const App = () => {
               <FiPhone />
             </a>
           </div>
-        </header>
+        </motion.header>
 
         {/* Main content layout */}
         <div className="flex pt-[12vh] h-full bg-[#3F3124]">
-          {/* Left section: About or Project Details */}
-          <section className="w-[40%] bg-white p-[2vh] fixed top-[12vh] bottom-0 flex items-center justify-center text-center overflow-hidden hide-scrollbar pt-[6vh]">
-            {selectedProject ? (
-              // Display selected project details and media
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="w-full h-full overflow-y-scroll hide-scrollbar p-4"
-              >
-                <div className="mb-6 mt-6 text-left">
-                  <div className="flex items-center gap-4">
-                    <button
-                      onClick={resetView}
-                      className="bg-[#E45310] text-white rounded-full p-2 hover:bg-[#e44d00] transition-colors"
-                    >
-                      <FaChevronLeft size={20} />
-                    </button>
-                    <h2 className="text-[#E45310] text-2xl font-bold">
-                      {selectedProject.title}
-                    </h2>
-                  </div>
-                  <p className="text-[#E45310] text-md mb-4 mt-2">
-                    {selectedProject.details}
-                  </p>
-                  <div className="flex justify-between text-sm text-gray-700">
-                    <div>
-                      <span className="font-semibold">Production House</span> |{" "}
-                      {selectedProject.productionHouse}
+          {/* Left section with animation */}
+          <motion.section
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            className="w-[40%] bg-white p-[2vh] fixed top-[12vh] bottom-0 flex items-center justify-center text-center overflow-hidden hide-scrollbar pt-[6vh]"
+          >
+            <AnimatePresence initial={false} mode="wait">
+              {selectedProject ? (
+                <motion.div
+                  key="project"
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: 50 }}
+                  transition={{ duration: 0.5 }}
+                  className="w-full h-full overflow-y-scroll hide-scrollbar p-4"
+                >
+                  <div className="mb-6 mt-6 text-left">
+                    <div className="flex items-center gap-4">
+                      <button
+                        onClick={resetView}
+                        className="bg-[#E45310] text-white rounded-full p-2 hover:bg-[#e44d00] transition-colors"
+                      >
+                        <FaChevronLeft size={20} />
+                      </button>
+                      <h2 className="text-[#E45310] text-2xl font-bold">
+                        {selectedProject.title}
+                      </h2>
                     </div>
-                    <div>
-                      <span className="font-semibold">Designation</span> |{" "}
-                      {selectedProject.designation}
+                    <p className="text-[#E45310] text-md mb-4 mt-2">
+                      {selectedProject.details}
+                    </p>
+                    <div className="flex justify-between text-sm text-gray-700">
+                      <div>
+                        <span className="font-semibold">Production House</span> |{" "}
+                        {selectedProject.productionHouse}
+                      </div>
+                      <div>
+                        <span className="font-semibold">Designation</span> |{" "}
+                        {selectedProject.designation}
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                  {mediaContent.map((media, index) => (
-                    <motion.div
-                      key={index}
-                      className={`relative w-full ${
-                        media.span ? "col-span-2 aspect-video mb-4" : "h-[25vh]"
-                      }`}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: index * 0.1 }}
-                    >
-                      {media.type === "video" ? (
-                        <>
-                          <video
+                  <div className="grid grid-cols-2 gap-4">
+                    {mediaContent.map((media, index) => (
+                      <motion.div
+                        key={index}
+                        className={`relative w-full ${media.span ? "col-span-2 aspect-video mb-4" : "h-[25vh]"
+                          }`}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                      >
+                        {media.type === "video" ? (
+                          <>
+                            <video
+                              src={media.src}
+                              className="w-full h-full rounded-lg shadow-lg object-cover"
+                            />
+                            <div
+                              className="absolute inset-0 flex items-center justify-center cursor-pointer"
+                              onClick={() => {
+                                setSelectedImageIndex(index);
+                                setIsVideoModalOpen(true);
+                                setIsImageModalOpen(false);
+                              }}
+                            >
+                              <BsPlayCircle className="text-white text-6xl hover:text-orange-500 transition-colors" />
+                            </div>
+                          </>
+                        ) : (
+                          <img
                             src={media.src}
-                            className="w-full h-full rounded-lg shadow-lg object-cover"
-                          />
-                          <div
-                            className="absolute inset-0 flex items-center justify-center cursor-pointer"
+                            alt={`Project media ${index + 1}`}
+                            className="w-full h-full rounded-lg shadow-lg object-cover cursor-pointer"
                             onClick={() => {
                               setSelectedImageIndex(index);
-                              setIsVideoModalOpen(true);
+                              setIsImageModalOpen(true);
+                              setIsVideoModalOpen(false);
                             }}
-                          >
-                            <BsPlayCircle className="text-white text-6xl hover:text-orange-500 transition-colors" />
-                          </div>
-                        </>
-                      ) : (
-                        <img
-                          src={media.src}
-                          alt={`Project media ${index + 1}`}
-                          className="w-full h-full rounded-lg shadow-lg object-cover cursor-pointer"
-                          onClick={() => {
-                            setSelectedImageIndex(index);
-                            setIsImageModalOpen(true);
-                          }}
-                        />
-                      )}
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            ) : (
-              // Display About Me section when no project is selected
-              <div>
-                <h2 className="mt-[7vh] text-2xl font-bold text-[#E45310] mb-6 font-poppins">
-                  Hi! A little about myself,
-                </h2>
-                <p className="text-gray-700 font-medium text-sm leading-relaxed px-10 pt-0 pb-4 font-poppins">
-                  (Based in the heart of architectural wonders) Having an
-                  extensive knowledge and education in architecture I dedicate
-                  my passion to crafting stories through the attention to
-                  spatial detail and understanding of the character narrative.
-                  From concept to completion, I'd like to say I drive the visual
-                  identity of design and space creation. With a combination of
-                  problem-solving balance, technical expertise and artistic
-                  vision I achieve to bring to the table a unique and
-                  captivating visual design stratum.
-                </p>
-                <div className="contact-info ml-8">
-                  <a
-                    href="https://instagram.com/mrugakshi18"
-                    className="contact-item hover:text-orange-500 transition-colors"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FiInstagram /> mrugakshi18
-                  </a>
-                  <a
-                    href="mailto:mrugakshi18@gmail.com"
-                    className="contact-item hover:text-orange-500 transition-colors"
-                  >
-                    <FiMail /> mrugakshi18@gmail.com
-                  </a>
-                  <a
-                    href="tel:9820408075"
-                    className="contact-item hover:text-orange-500 transition-colors"
-                  >
-                    <FiPhone /> 9820408075
-                  </a>
-                </div>
-              </div>
-            )}
-          </section>
+                          />
+                        )}
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="about"
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -50 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <h2 className="mt-[7vh] text-2xl font-bold text-[#E45310] mb-6 font-poppins">
+                    Hi! A little about myself,
+                  </h2>
+                  <p className="text-gray-700 font-medium text-sm leading-relaxed px-10 pt-0 pb-4 font-poppins">
+                    (Based in the heart of architectural wonders) Having an
+                    extensive knowledge and education in architecture I dedicate
+                    my passion to crafting stories through the attention to
+                    spatial detail and understanding of the character narrative.
+                    From concept to completion, I'd like to say I drive the visual
+                    identity of design and space creation. With a combination of
+                    problem-solving balance, technical expertise and artistic
+                    vision I achieve to bring to the table a unique and
+                    captivating visual design stratum.
+                  </p>
+                  <div className="contact-info ml-8">
+                    <a
+                      href="https://instagram.com/mrugakshi18"
+                      className="contact-item hover:text-orange-500 transition-colors"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <FiInstagram /> mrugakshi18
+                    </a>
+                    <a
+                      href="mailto:mrugakshi18@gmail.com"
+                      className="contact-item hover:text-orange-500 transition-colors"
+                    >
+                      <FiMail /> mrugakshi18@gmail.com
+                    </a>
+                    <a
+                      href="tel:9820408075"
+                      className="contact-item hover:text-orange-500 transition-colors"
+                    >
+                      <FiPhone /> 9820408075
+                    </a>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.section>
 
-          {/* Middle section: Project Timeline */}
-          <section className="relative w-[25%] ml-[40%] overflow-y-scroll hide-scrollbar bg-[#3F3124] py-0 timeline-section">
+          {/* Middle section without animation */}
+          <section
+            className="relative w-[25%] ml-[40%] overflow-y-scroll hide-scrollbar bg-[#3F3124] py-0 timeline-section"
+          >
             <div className="vertical-strip"></div>
             <div className="flex flex-col py-12" style={{ rowGap: "6vw" }}>
               {sortedProjects.map((project) => (
@@ -519,20 +557,16 @@ const App = () => {
                   onClick={() => handleProjectClick(project)}
                 >
                   <div
-                    className={`project-number ${
-                      selectedProject?.id === project.id ? "selected" : ""
-                    }`}
+                    className={`project-number ${selectedProject?.id === project.id ? "selected" : ""
+                      }`}
                   >
                     {String(project.id).padStart(2, "0")}
                   </div>
                   <div
-                    className={`project-details ${
-                      selectedProject?.id === project.id ? "selected" : ""
-                    }`}
+                    className={`project-details ${selectedProject?.id === project.id ? "selected" : ""
+                      }`}
                   >
-                    <h3 className="text-xl font-semibold mb-1">
-                      {project.title}
-                    </h3>
+                    <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
                     <p className="text-sm mb-1">{project.date}</p>
                   </div>
                 </motion.div>
@@ -540,8 +574,13 @@ const App = () => {
             </div>
           </section>
 
-          {/* Right section: Project Timeline Heading */}
-          <section className="w-[35%] fixed right-[5vw] top-[0px] bottom-0 text-white px-6 py-0 relative">
+          {/* Right section with animation */}
+          <motion.section
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            className="w-[35%] fixed right-[5vw] top-[0px] bottom-0 text-white px-6 py-0 relative"
+          >
             <div className="flex items-center gap-4">
               <div className="project-timeline-heading">
                 Project
@@ -552,85 +591,113 @@ const App = () => {
                 </p>
               </div>
             </div>
-          </section>
+          </motion.section>
         </div>
       </div>
 
-      {/* Video Modal */}
-      {isVideoModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
-          <div
-            className="absolute inset-0 bg-[#1A0D00] opacity-90"
-            onClick={() => setIsVideoModalOpen(false)}
-          />
-          <div className="relative w-[80vw] max-w-4xl z-10">
-            <button
-              className="absolute -top-[5vh] right-0 text-white text-2xl hover:text-orange-500 transition-colors"
+      {/* Video Modal with pop-out animation */}
+      <AnimatePresence>
+        {isVideoModalOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-50 flex items-center justify-center"
+          >
+            <div
+              className="absolute inset-0 bg-[#1A0D00] opacity-90"
               onClick={() => setIsVideoModalOpen(false)}
+            />
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0 }}
+              transition={{ duration: 0.3 }}
+              className="relative w-[80vw] max-w-4xl z-10"
             >
-              <AiOutlineClose />
-            </button>
-            <button className="nav-button left" onClick={handlePreviousMedia}>
-              <FaChevronLeft />
-            </button>
-            <button className="nav-button right" onClick={handleNextMedia}>
-              <FaChevronRight />
-            </button>
-            {mediaContent[selectedImageIndex].type === "video" ? (
-              <video
-                src={mediaContent[selectedImageIndex].src}
-                controls
-                autoPlay
-                className="w-full rounded-lg shadow-lg"
-              />
-            ) : (
-              <img
-                src={mediaContent[selectedImageIndex].src}
-                alt={`Selected project media`}
-                className="w-full rounded-lg shadow-lg"
-              />
-            )}
-          </div>
-        </div>
-      )}
+              <button
+                className="absolute -top-[5vh] right-0 text-white text-2xl hover:text-orange-500 transition-colors"
+                onClick={() => setIsVideoModalOpen(false)}
+              >
+                <AiOutlineClose />
+              </button>
+              <button className="nav-button left" onClick={handlePreviousMedia}>
+                <FaChevronLeft />
+              </button>
+              <button className="nav-button right" onClick={handleNextMedia}>
+                <FaChevronRight />
+              </button>
+              {mediaContent[selectedImageIndex].type === "video" ? (
+                <video
+                  src={mediaContent[selectedImageIndex].src}
+                  controls
+                  autoPlay
+                  className="w-full rounded-lg shadow-lg"
+                />
+              ) : (
+                <img
+                  src={mediaContent[selectedImageIndex].src}
+                  alt={`Selected project media`}
+                  className="w-full rounded-lg shadow-lg"
+                />
+              )}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-      {/* Image Modal */}
-      {isImageModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
-          <div
-            className="absolute inset-0 bg-[#1A0D00] opacity-90"
-            onClick={() => setIsImageModalOpen(false)}
-          />
-          <div className="relative w-[80vw] max-w-4xl z-10">
-            <button
-              className="absolute -top-[5vh] right-0 text-white text-2xl hover:text-orange-500 transition-colors"
+      {/* Image Modal with pop-out animation */}
+      <AnimatePresence>
+        {isImageModalOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-50 flex items-center justify-center"
+          >
+            <div
+              className="absolute inset-0 bg-[#1A0D00] opacity-90"
               onClick={() => setIsImageModalOpen(false)}
+            />
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0 }}
+              transition={{ duration: 0.3 }}
+              className="relative w-[80vw] max-w-4xl z-10"
             >
-              <AiOutlineClose />
-            </button>
-            <button className="nav-button left" onClick={handlePreviousMedia}>
-              <FaChevronLeft />
-            </button>
-            <button className="nav-button right" onClick={handleNextMedia}>
-              <FaChevronRight />
-            </button>
-            {mediaContent[selectedImageIndex].type === "video" ? (
-              <video
-                src={mediaContent[selectedImageIndex].src}
-                controls
-                autoPlay
-                className="w-full rounded-lg shadow-lg"
-              />
-            ) : (
-              <img
-                src={mediaContent[selectedImageIndex].src}
-                alt="Selected project media"
-                className="w-full rounded-lg shadow-lg"
-              />
-            )}
-          </div>
-        </div>
-      )}
+              <button
+                className="absolute -top-[5vh] right-0 text-white text-2xl hover:text-orange-500 transition-colors"
+                onClick={() => setIsImageModalOpen(false)}
+              >
+                <AiOutlineClose />
+              </button>
+              <button className="nav-button left" onClick={handlePreviousMedia}>
+                <FaChevronLeft />
+              </button>
+              <button className="nav-button right" onClick={handleNextMedia}>
+                <FaChevronRight />
+              </button>
+              {mediaContent[selectedImageIndex].type === "video" ? (
+                <video
+                  src={mediaContent[selectedImageIndex].src}
+                  controls
+                  autoPlay
+                  className="w-full rounded-lg shadow-lg"
+                />
+              ) : (
+                <img
+                  src={mediaContent[selectedImageIndex].src}
+                  alt="Selected project media"
+                  className="w-full rounded-lg shadow-lg"
+                />
+              )}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };
