@@ -7,8 +7,6 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 import projectTimelineIcon from "./assets/images/project_timeline.svg";
 
-import defaultLogo from "./assets/logos/04.png";
-
 // Import media assets for 01. ctrl-alt-believe project
 import vid0101c from "./assets/videos/01/1c.mp4";
 import img0101l from "./assets/images/01/1l.webp";
@@ -150,7 +148,7 @@ const projects = [
     title: "ctrl + alt + believe (Mother’s Day)",
     date: "08.11.2024",
     details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    logo: defaultLogo,
+    logo: null,
     productionHouse: "",
     director: "",
     Cinematographer: "",
@@ -194,7 +192,7 @@ const projects = [
     title: "Mothers recipe",
     date: "24.07.2024",
     details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    logo: defaultLogo,
+    logo: null,
     productionHouse: "Happy Crew Films",
     director: "Manav Malhotra",
     Cinematographer: "Aadi Iyer",
@@ -216,7 +214,7 @@ const projects = [
     title: "Jio",
     date: "03.3.2024",
     details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    logo: defaultLogo,
+    logo: null,
     productionHouse: "Jugaad Motion Pictures",
     director: "Aadi Iyer",
     Cinematographer: "Rajiv Malu",
@@ -249,7 +247,7 @@ const projects = [
     title: "19 years in Versova (short film)",
     date: "21.06.2024",
     details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    logo: defaultLogo,
+    logo: null,
     productionHouse: "",
     director: "Ashwin Karthikeyan",
     Cinematographer: "Aditya Verma",
@@ -260,7 +258,7 @@ const projects = [
     title: "Aisi woh Barish (music video)",
     date: "21.06.2024",
     details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    logo: defaultLogo,
+    logo: null,
     productionHouse: "Sunshine Motion Pictures",
     director: "Heem Verma",
     Cinematographer: "Vishnu Dev",
@@ -271,7 +269,7 @@ const projects = [
     title: "How not to deal with grief (short film)",
     date: "21.06.2024",
     details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    logo: defaultLogo,
+    logo: null,
     productionHouse: "",
     director: "Ashwin Karthikeyan",
     Cinematographer: "Vaibhav Sanghvi",
@@ -353,7 +351,7 @@ const App = () => {
       { type: "image", src: img0204r, span: false },
       { type: "image", src: img0205l, span: false },
       { type: "image", src: img0205r, span: false },
-      { type: "image", src: img0206c, span: false },
+      { type: "image", src: img0206c, span: true },
     ],
     3: [
       { type: "video", src: vid0301c, span: true },
@@ -412,10 +410,10 @@ const App = () => {
     ],
     9: [
       { type: "video", src: vid0901c, span: true },
-      { type: "image", src: img0901c, span: false },
+      { type: "image", src: img0901c, span: true },
       { type: "image", src: img0902l, span: false },
       { type: "image", src: img0902r, span: false },
-      { type: "image", src: img0903c, span: false },
+      { type: "image", src: img0903c, span: true },
     ],
     10: [
       { type: "image", src: img1001l, span: false },
@@ -439,7 +437,7 @@ const App = () => {
       { type: "image", src: img1104r, span: false },
       { type: "image", src: img1105l, span: false },
       { type: "image", src: img1105r, span: false },
-      { type: "image", src: img1106c, span: false },
+      { type: "image", src: img1106c, span: true },
     ],
     12: [
       { type: "video", src: vid1201c, span: true },
@@ -502,7 +500,8 @@ const App = () => {
 
           .timeline-section {
             position: relative;
-            top: 7vh;
+            top: 4vh;
+            height: calc(100vh - 12vh)
           }
 
           .vertical-strip {
@@ -510,7 +509,7 @@ const App = () => {
             left: 43.2%;
             top: 0;
             bottom: 0;
-            width: 6.5vw;
+            width: 6.9vw;
             height: 100%;
             background-color: #E45310;
             z-index: 0;
@@ -545,7 +544,6 @@ const App = () => {
             padding-left: 1.5vw;
             transition: transform 0.3s ease;
             color: #F5F5F5;
-            margin-left: 1vw;
           }
 
           .project-details.selected {
@@ -881,13 +879,14 @@ const App = () => {
                 <motion.div
                   whileHover={{ scale: 1.02 }}
                   key={project.id}
-                  className="project-item cursor-pointer"
+                  className="project-item cursor-pointer flex items-start"
                   onClick={() => handleProjectClick(project)}
                 >
                   <div
                     className={`project-number ${
                       selectedProject?.id === project.id ? "selected" : ""
                     }`}
+                    style={{ flexShrink: 0 }}
                   >
                     {String(project.id).padStart(2, "0")}
                   </div>
@@ -895,7 +894,15 @@ const App = () => {
                     className={`project-details ${
                       selectedProject?.id === project.id ? "selected" : ""
                     }`}
+                    style={{ marginLeft: "0.5vw" }}
                   >
+                    {project.logo && project.logo !== null && (
+                      <img
+                        src={project.logo}
+                        alt={`${project.title} logo`}
+                        className="w-16 h-10 mb-1 object-contain"
+                      />
+                    )}
                     <h3 className="text-xl font-semibold mb-1">
                       {project.title}
                     </h3>
