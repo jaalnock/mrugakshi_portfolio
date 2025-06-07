@@ -117,17 +117,16 @@ const Styles = () => (
         display: flex;
         flex-direction: column;
         gap: 12px;
-        margin-top: 8vh;
-        margin-left: 7%;
-        margin-right: auto;
-        width: fit-content;
+        margin-top: 20vh;
+        margin-left: 3vw;
       }
 
       .contact-item {
         display: flex;
         align-items: center;
         gap: 12px;
-        color: #363636;
+        color: #000000;
+        font-family: 'Poppins', sans-serif;
         font-size: 14px;
         font-weight: 500;
         text-decoration: none;
@@ -259,7 +258,7 @@ const Styles = () => (
         .about-row {
           display: flex !important;
           flex-direction: column !important;
-          align-items: flex-start !important; /* Align items to the left */
+          align-items: flex-start !important;
           width: 100% !important;
           background: #fff !important;
           padding: 24px 10px 10px 10px !important;
@@ -271,7 +270,7 @@ const Styles = () => (
 
         .about-text {
           width: 100%;
-          text-align: center; /* Keep title and description centered */
+          text-align: center;
           padding: 0 0.5rem;
           margin: 0 auto;
         }
@@ -301,12 +300,12 @@ const Styles = () => (
         .contact-item {
           display: flex !important;
           align-items: center !important;
-          justify-content: flex-start !important; /* Align icon and text to the left */
+          justify-content: flex-start !important;
           gap: 10px !important;
           color: #444444 !important;
-          font-size: 1.05rem !important;
-          font-weight: 500 !important;
-          text-align: left !important; /* Align text to the left */
+          font-size: 0.85rem !important;
+          font-weight: 300 !important;
+          text-align: left !important;
         }
 
         .contact-item svg {
@@ -391,8 +390,7 @@ const Styles = () => (
         .w-full.h-full.overflow-y-scroll.hide-scrollbar.p-4 {
           position: static !important;
           width: 100% !important;
-          height: auto !important;
-          max-height: 500px !important;
+          height: 400px !important;
           overflow-y: auto !important;
           background: #fff !important;
           z-index: 200 !important;
@@ -419,24 +417,34 @@ const Styles = () => (
         .text-[#E45310].text-2xl.font-bold {
           font-size: 1.15rem !important;
         }
+        /* Updated mobile media styles */
         .grid.grid-cols-2.gap-4 {
-          grid-template-columns: 1fr !important;
+          display: flex !important;
+          flex-direction: column !important;
           gap: 10px !important;
         }
         .col-span-2.aspect-video.mb-4, .h-[25vh] {
-          height: 180px !important;
-          min-height: 120px !important;
-          max-height: 220px !important;
           width: 100% !important;
+          height: auto !important;
+          aspect-ratio: 16 / 9 !important;
           margin-bottom: 10px !important;
         }
         .w-full.h-full.rounded-lg.shadow-lg.object-cover {
+          width: 100% !important;
+          height: auto !important;
+          aspect-ratio: 16 / 9 !important;
           border-radius: 0.7rem !important;
           box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
+          object-fit: cover !important;
+        }
+        .relative.w-full {
+          width: 100% !important;
+          height: auto !important;
+          aspect-ratio: 16 / 9 !important;
         }
 
         .fixed.inset-0.z-50.flex.items-center.justify-center {
-          align-items: flex-end !important;
+          align-items: center !important;
           justify-content: center !important;
           padding: 0 !important;
           z-index: 300 !important;
@@ -476,33 +484,15 @@ const Styles = () => (
           z-index: 20 !important;
         }
 
-        .about-row {
-          display: flex !important;
-          flex-direction: column !important;
-          align-items: center !important;
-          width: 100% !important;
-          background: #fff !important;
-          padding: 24px 10px 10px 10px !important;
-          z-index: 2;
-          position: relative;
-          min-height: 300px !important;
-        }
-        .about-text {
-          width: 100%;
-          text-align: center;
-        }
-        .about-text h2 {
-          font-size: 1.3rem !important;
-          margin-top: 12px !important;
-          margin-bottom: 0.5rem !important;
-          padding: 0 !important;
+        .about-row h2 {
           font-weight: bold !important;
           text-align: center !important;
+          font-size: 1.15rem !important;
+          margin-top: 18px !important;
+          margin-bottom: 1.1rem !important;
+          color: #E45310 !important;
         }
-        .contact-info.ml-8 {
-          align-items: left !important;
-          margin: 1.5rem 0 0 0 !important;
-        }
+
         .timeline-area {
           display: flex !important;
           flex-direction: column !important;
@@ -511,7 +501,9 @@ const Styles = () => (
           margin: 0 !important;
           padding: 0 !important;
           background: #3F3124 !important;
-          height: 400px !important;
+          min-height: 300px !important;
+          height: auto !important;
+          overflow-y: auto !important;
           border-radius: 0 0 18px 18px;
           position: relative;
           z-index: 1;
@@ -519,11 +511,12 @@ const Styles = () => (
         .timeline-content {
           background: #3F3124 !important;
           color: #F5F5F5 !important;
-          flex: 1 1 0%;
           padding: 18px 12px 24px 12px !important;
           display: flex;
           flex-direction: column;
-          height: 400px !important;
+          min-height: 300px !important;
+          height: auto !important;
+          overflow-y: auto !important;
           border-radius: 0 0 18px 0;
           position: relative;
         }
@@ -536,26 +529,22 @@ const Styles = () => (
           display: block !important;
           padding-left: 2px;
           padding-top: 2px;
-          position: relative;
-          z-index: 2;
+          position: sticky;
+          top: 0;
+          background: #3F3124 !important;
+          z-index: 3;
         }
         .project-timeline-list {
-          overflow-y: auto !important;
-          max-height: 300px !important;
-          padding-right: 2px;
           display: flex;
           flex-direction: column;
-          gap: 0;
+          gap: 12px !important;
+          overflow-y: auto !important;
+          overflow-x: hidden !important;
+          height: 300px !important;
+          padding-right: 8px !important;
+          padding-bottom: 24px !important;
           position: relative;
           z-index: 2;
-        }
-        .about-row h2 {
-          font-weight: bold !important;
-          text-align: center !important;
-          font-size: 1.15rem !important;
-          margin-top: 18px !important;
-          margin-bottom: 1.1rem !important;
-          color: #E45310 !important;
         }
       }
     `}
