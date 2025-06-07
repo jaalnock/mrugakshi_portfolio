@@ -29,6 +29,17 @@ const Styles = () => (
         top: 4vh;
         height: calc(100vh - 12vh);
       }
+      .vertical-strip {
+          position: fixed;
+          left: 43.2%;
+          top: 0;
+          bottom: 0;
+          width: 6.9vw;
+          height: 100%;
+          background-color: #E45310;
+          z-index: 0;
+          transform: translateX(-50%);
+        }
 
       @keyframes stripColorChange {
         from {
@@ -116,8 +127,7 @@ const Styles = () => (
         display: flex;
         align-items: center;
         gap: 12px;
-        color: #000000;
-        font-family: 'Poppins', sans-serif;
+        color: #363636;
         font-size: 14px;
         font-weight: 500;
         text-decoration: none;
@@ -281,18 +291,11 @@ const Styles = () => (
           text-align: center !important;
           line-height: 1.5 !important;
           color: #444 !important;
-          margin-bottom: 1.5rem !important;
         }
-
-        .contact-info {
-          display: flex !important;
-          flex-direction: column !important;
-          justify-content: flex-start !important; /* Align items to the left */
-          align-items: flex-start !important; /* Align items to the left */
-          gap: 10px !important;
-          margin: 1.5rem 0 0 8px !important; /* Add left margin as in the second image */
-          width: auto !important; /* Let it take natural width */
-          padding: 0 !important;
+        .contact-info.ml-8 {
+          align-items: flex-start !important;
+          text-align: left !important;
+          margin: 1.5rem 0 0 8px !important;
         }
 
         .contact-item {
@@ -309,7 +312,7 @@ const Styles = () => (
         .contact-item svg {
           font-size: 1.2rem !important;
           color: #E45310 !important;
-          flex-shrink: 0;
+          text-align: left !important;
         }
 
         .w-[25%].ml-[40%].overflow-y-scroll {
@@ -473,6 +476,33 @@ const Styles = () => (
           z-index: 20 !important;
         }
 
+        .about-row {
+          display: flex !important;
+          flex-direction: column !important;
+          align-items: center !important;
+          width: 100% !important;
+          background: #fff !important;
+          padding: 24px 10px 10px 10px !important;
+          z-index: 2;
+          position: relative;
+          min-height: 300px !important;
+        }
+        .about-text {
+          width: 100%;
+          text-align: center;
+        }
+        .about-text h2 {
+          font-size: 1.3rem !important;
+          margin-top: 12px !important;
+          margin-bottom: 0.5rem !important;
+          padding: 0 !important;
+          font-weight: bold !important;
+          text-align: center !important;
+        }
+        .contact-info.ml-8 {
+          align-items: left !important;
+          margin: 1.5rem 0 0 0 !important;
+        }
         .timeline-area {
           display: flex !important;
           flex-direction: column !important;
@@ -518,6 +548,14 @@ const Styles = () => (
           gap: 0;
           position: relative;
           z-index: 2;
+        }
+        .about-row h2 {
+          font-weight: bold !important;
+          text-align: center !important;
+          font-size: 1.15rem !important;
+          margin-top: 18px !important;
+          margin-bottom: 1.1rem !important;
+          color: #E45310 !important;
         }
       }
     `}

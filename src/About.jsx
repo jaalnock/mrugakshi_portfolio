@@ -21,7 +21,7 @@ const About = () => (
       problem-solving balance, technical expertise and artistic vision I achieve
       to bring to the table a unique and captivating visual design stratum.
     </p>
-    <div className="contact-info">
+    <div className="contact-info ml-8 font-semibold">
       <a
         href="https://instagram.com/mrugakshi18"
         className="contact-item hover:text-orange-500 transition-colors"

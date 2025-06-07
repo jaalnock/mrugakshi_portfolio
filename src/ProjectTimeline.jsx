@@ -52,6 +52,7 @@ const ProjectTimeline = ({
       </div>
     ) : (
       <>
+        <div className="vertical-strip"></div>
         <div className="flex flex-col py-12" style={{ rowGap: "6vw" }}>
           {projects.map((project) => (
             <motion.div
