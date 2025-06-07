@@ -9,11 +9,10 @@ const About = () => (
     animate={{ opacity: 1, x: 0 }}
     exit={{ opacity: 0, x: -50 }}
     transition={{ duration: 0.5 }}
+    className="about-text"
   >
-    <h2 className="mt-[7vh] text-2xl font-bold text-[#E45310] mb-6 font-poppins">
-      Hi! A little about myself,
-    </h2>
-    <p className="text-gray-700 font-medium text-l leading-relaxed px-10 pt-0 pb-4 font-poppins">
+    <h2 className="about-title">Hi! A little about myself,</h2>
+    <p className="about-description">
       (Based in the heart of architectural wonders) Having an extensive
       knowledge and education in architecture I dedicate my passion to crafting
       stories through the attention to spatial detail and understanding of the
@@ -22,7 +21,7 @@ const About = () => (
       problem-solving balance, technical expertise and artistic vision I achieve
       to bring to the table a unique and captivating visual design stratum.
     </p>
-    <div className="contact-info ml-8">
+    <div className="contact-info">
       <a
         href="https://instagram.com/mrugakshi18"
         className="contact-item hover:text-orange-500 transition-colors"

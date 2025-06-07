@@ -74,12 +74,42 @@ const Styles = () => (
         transform: scale(1.02);
       }
 
+      /* About Section Styles (Desktop) */
+      .about-text {
+        width: 100%;
+        text-align: center;
+        padding: 0 2rem;
+      }
+
+      .about-title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #E45310;
+        margin-top: 7vh;
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+
+      .about-description {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #666;
+        line-height: 1.5;
+        text-align: center;
+        padding: 0 2rem;
+        margin-bottom: 2rem;
+      }
+
       .contact-info {
         display: flex;
         flex-direction: column;
         gap: 12px;
-        margin-top: 20vh;
-        margin-left: 3vw;
+        margin-top: 8vh;
+        margin-left: 7%;
+        margin-right: auto;
+        width: fit-content;
       }
 
       .contact-item {
@@ -87,12 +117,18 @@ const Styles = () => (
         align-items: center;
         gap: 12px;
         color: #000000;
+        font-family: 'Poppins', sans-serif;
         font-size: 14px;
+        font-weight: 500;
         text-decoration: none;
       }
 
       .contact-item svg {
         font-size: 18px;
+        color: #E45310;
+      }
+
+      .contact-item:hover {
         color: #E45310;
       }
 
@@ -184,8 +220,8 @@ const Styles = () => (
           letter-spacing: 0.01em;
         }
         .flex.flex-col.items-center.gap-4.text-orange-500.text-xl.mt-1.pr-10 {
-          flex-direction: row !important;
-          gap: 18px !important;
+          flex-direction: column !important;
+          gap: 8px !important;
           margin: 0 !important;
           padding: 0 !important;
           align-items: center !important;
@@ -208,41 +244,72 @@ const Styles = () => (
           border-radius: 0 !important;
           margin: 0 !important;
         }
-        .mt-[7vh], .mb-6, .font-poppins {
-          margin-top: 0 !important;
-          margin-bottom: 1.1rem !important;
-          font-size: 1.08rem !important;
-          text-align: center !important;
-          font-weight: 600 !important;
+
+        /* About Section Styles (Mobile) */
+        .about-row {
+          display: flex !important;
+          flex-direction: column !important;
+          align-items: flex-start !important; /* Align items to the left */
+          width: 100% !important;
+          background: #fff !important;
+          padding: 24px 10px 10px 10px !important;
+          z-index: 2;
+          position: relative;
+          min-height: 300px !important;
+          margin: 0 !important;
         }
-        .text-gray-700.font-medium.text-l.leading-relaxed.px-10.pt-0.pb-4.font-poppins {
+
+        .about-text {
+          width: 100%;
+          text-align: center; /* Keep title and description centered */
+          padding: 0 0.5rem;
+          margin: 0 auto;
+        }
+
+        .about-title {
+          font-size: 1.3rem !important;
+          margin-top: 12px !important;
+          margin-bottom: 0.5rem !important;
+          padding: 0 !important;
+          font-weight: bold !important;
+          text-align: center !important;
+        }
+
+        .about-description {
           padding: 0 0.5rem !important;
           font-size: 0.98rem !important;
           text-align: center !important;
           line-height: 1.5 !important;
           color: #444 !important;
+          margin-bottom: 1.5rem !important;
         }
-        .contact-info.ml-8 {
-          align-items: flex-start !important;
-          text-align: left !important;
-          color: #444444 !important;
-          margin: 1.5rem 0 0 8px !important;
-          gap: 12px !important;
+
+        .contact-info {
           display: flex !important;
           flex-direction: column !important;
-          margin-left: 8px !important;
+          justify-content: flex-start !important; /* Align items to the left */
+          align-items: flex-start !important; /* Align items to the left */
+          gap: 10px !important;
+          margin: 1.5rem 0 0 8px !important; /* Add left margin as in the second image */
+          width: auto !important; /* Let it take natural width */
+          padding: 0 !important;
         }
+
         .contact-item {
+          display: flex !important;
+          align-items: center !important;
+          justify-content: flex-start !important; /* Align icon and text to the left */
+          gap: 10px !important;
           color: #444444 !important;
           font-size: 1.05rem !important;
-          justify-content: flex-start !important;
-          gap: 10px !important;
-          font-weight: 500;
-          text-align: left !important;
+          font-weight: 500 !important;
+          text-align: left !important; /* Align text to the left */
         }
+
         .contact-item svg {
           font-size: 1.2rem !important;
-          color: #444444 !important;
+          color: #E45310 !important;
+          flex-shrink: 0;
         }
 
         .w-[25%].ml-[40%].overflow-y-scroll {
@@ -406,33 +473,6 @@ const Styles = () => (
           z-index: 20 !important;
         }
 
-        .about-row {
-          display: flex !important;
-          flex-direction: column !important;
-          align-items: center !important;
-          width: 100% !important;
-          background: #fff !important;
-          padding: 24px 10px 10px 10px !important;
-          z-index: 2;
-          position: relative;
-          min-height: 300px !important;
-        }
-        .about-text {
-          width: 100%;
-          text-align: center;
-        }
-        .about-text h2 {
-          font-size: 1.3rem !important;
-          margin-top: 12px !important;
-          margin-bottom: 0.5rem !important;
-          padding: 0 !important;
-          font-weight: bold !important;
-          text-align: center !important;
-        }
-        .contact-info.ml-8 {
-          align-items: center !important;
-          margin: 1.5rem 0 0 0 !important;
-        }
         .timeline-area {
           display: flex !important;
           flex-direction: column !important;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react"; // Add useMemo
 import { motion, AnimatePresence } from "framer-motion";
 import projectTimelineIcon from "./assets/images/project_timeline.svg";
 import { projects, projectSpecificContent } from "./projectMedia";
@@ -18,9 +18,13 @@ const App = () => {
   const [mediaLoadStates, setMediaLoadStates] = useState([]);
 
   const sortedProjects = [...projects].sort((a, b) => b.id - a.id);
-  const mediaContent = selectedProject
-    ? projectSpecificContent[selectedProject.id]
-    : [];
+
+  // Memoize mediaContent to ensure stable reference
+  const mediaContent = useMemo(
+    () =>
+      selectedProject ? projectSpecificContent[selectedProject.id] || [] : [],
+    [selectedProject]
+  );
 
   useEffect(() => {
     setMediaLoadStates(new Array(mediaContent.length).fill(false));
@@ -133,6 +137,7 @@ const App = () => {
   );
 };
 
+// MobileLayout and DesktopLayout remain unchanged
 const MobileLayout = ({
   selectedProject,
   resetView,
