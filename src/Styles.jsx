@@ -29,6 +29,17 @@ const Styles = () => (
         top: 4vh;
         height: calc(100vh - 12vh);
       }
+      .vertical-strip {
+          position: fixed;
+          left: 43.2%;
+          top: 0;
+          bottom: 0;
+          width: 6.9vw;
+          height: 100%;
+          background-color: #E45310;
+          z-index: 0;
+          transform: translateX(-50%);
+        }
 
       @keyframes stripColorChange {
         from {
@@ -86,7 +97,7 @@ const Styles = () => (
         display: flex;
         align-items: center;
         gap: 12px;
-        color: #000000;
+        color: #363636;
         font-size: 14px;
         text-decoration: none;
       }
@@ -225,12 +236,7 @@ const Styles = () => (
         .contact-info.ml-8 {
           align-items: flex-start !important;
           text-align: left !important;
-          color: #444444 !important;
           margin: 1.5rem 0 0 8px !important;
-          gap: 12px !important;
-          display: flex !important;
-          flex-direction: column !important;
-          margin-left: 8px !important;
         }
         .contact-item {
           color: #444444 !important;
@@ -242,7 +248,8 @@ const Styles = () => (
         }
         .contact-item svg {
           font-size: 1.2rem !important;
-          color: #444444 !important;
+          color: #E45310 !important;
+          text-align: left !important;
         }
 
         .w-[25%].ml-[40%].overflow-y-scroll {
@@ -430,7 +437,7 @@ const Styles = () => (
           text-align: center !important;
         }
         .contact-info.ml-8 {
-          align-items: center !important;
+          align-items: left !important;
           margin: 1.5rem 0 0 0 !important;
         }
         .timeline-area {
@@ -478,6 +485,14 @@ const Styles = () => (
           gap: 0;
           position: relative;
           z-index: 2;
+        }
+        .about-row h2 {
+          font-weight: bold !important;
+          text-align: center !important;
+          font-size: 1.15rem !important;
+          margin-top: 18px !important;
+          margin-bottom: 1.1rem !important;
+          color: #E45310 !important;
         }
       }
     `}

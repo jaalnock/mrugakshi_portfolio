@@ -31,7 +31,7 @@ const ProjectDetails = ({
         </button>
         <h2 className="text-[#E45310] text-2xl font-bold">{project.title}</h2>
       </div>
-      <p className="text-[#E45310] text-md mb-4 mt-2">{project.details}</p>
+      {/* <p className="text-[#E45310] text-md mb-4 mt-2">{project.details}</p> */}
       <div className="flex flex-wrap gap-x-10 gap-y-2 text-sm text-gray-700 font-poppins mt-4">
         {project.productionHouse && (
           <div className="min-w-[180px]">
