@@ -150,8 +150,8 @@ const Styles = () => (
         color: white;
         border: none;
         border-radius: 50%;
-        width: 4vw;
-        height: 4vw;
+        width: 3vw;
+        height: 3vw;
         display: flex;
         align-items: center;
         justify-content: center;
