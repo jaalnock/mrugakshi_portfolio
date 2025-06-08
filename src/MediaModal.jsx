@@ -47,7 +47,7 @@ const MediaModal = ({
           {mediaContent[selectedImageIndex].type === "video" ? (
             <video
               src={mediaContent[selectedImageIndex].src}
-              className="w-full rounded-lg shadow-lg h-96"
+              className="w-full rounded-lg shadow-lg max-h-full object-contain"
               autoPlay
               controls
             />
@@ -55,7 +55,7 @@ const MediaModal = ({
             <img
               src={mediaContent[selectedImageIndex].src}
               alt={`Media ${selectedImageIndex}`}
-              className="w-full rounded-lg shadow-lg h-96 object-cover"
+              className="w-full rounded-lg shadow-lg max-h-full object-contain"
             />
           )}
         </motion.div>
