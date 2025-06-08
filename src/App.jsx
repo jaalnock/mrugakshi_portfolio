@@ -150,31 +150,33 @@ const MobileLayout = ({
   sortedProjects,
   handleProjectClick,
 }) => (
-  <div className="main-mobile-layout">
-    <div className="about-row">
-      <AnimatePresence initial={false} mode="wait">
-        {selectedProject ? (
-          <ProjectDetails
-            project={selectedProject}
-            resetView={resetView}
-            mediaContent={mediaContent}
-            mediaLoadStates={mediaLoadStates}
-            handleMediaLoad={handleMediaLoad}
-            setSelectedImageIndex={setSelectedImageIndex}
-            setIsVideoModalOpen={setIsVideoModalOpen}
-            setIsImageModalOpen={setIsImageModalOpen}
-          />
-        ) : (
-          <About />
-        )}
-      </AnimatePresence>
+  <div className="content-container">
+    <div className="main-mobile-layout">
+      <div className="about-row">
+        <AnimatePresence initial={false} mode="wait">
+          {selectedProject ? (
+            <ProjectDetails
+              project={selectedProject}
+              resetView={resetView}
+              mediaContent={mediaContent}
+              mediaLoadStates={mediaLoadStates}
+              handleMediaLoad={handleMediaLoad}
+              setSelectedImageIndex={setSelectedImageIndex}
+              setIsVideoModalOpen={setIsVideoModalOpen}
+              setIsImageModalOpen={setIsImageModalOpen}
+            />
+          ) : (
+            <About />
+          )}
+        </AnimatePresence>
+      </div>
+      <ProjectTimeline
+        projects={sortedProjects}
+        selectedProject={selectedProject}
+        handleProjectClick={handleProjectClick}
+        isMobile={true}
+      />
     </div>
-    <ProjectTimeline
-      projects={sortedProjects}
-      selectedProject={selectedProject}
-      handleProjectClick={handleProjectClick}
-      isMobile={true}
-    />
   </div>
 );
 
