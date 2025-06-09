@@ -152,8 +152,8 @@ const Styles = () => (
         color: white;
         border: none;
         border-radius: 50%;
-        width: 3vw;
-        height: 3vw;
+        width: 4vw;
+        height: 4vw;
         display: flex;
         align-items: center;
         justify-content: center;
