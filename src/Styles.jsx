@@ -152,8 +152,8 @@ const Styles = () => (
         color: white;
         border: none;
         border-radius: 50%;
-        width: 4vw;
-        height: 4vw;
+        width: 3vw;
+        height: 3vw;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -373,7 +373,7 @@ const Styles = () => (
         /* Timeline Area and Strip */
         .timeline-area {
           background-color: #3F3124; /* Dark brown background for mobile timeline */
-          padding: 8vw 4.3vw; /* Add padding to the timeline area */
+          padding: 4vw 4.3vw; /* Add padding to the timeline area */
           position: relative; /* Establish positioning context for the pseudo-element */
           display: flex;
           flex-direction: column;
@@ -441,10 +441,22 @@ const Styles = () => (
           padding-bottom: 6.4vw;
           position: relative;
           z-index: 2;
-          width: 65%; /* Adjust width to fill remaining space */
+          width: 65%;
           -webkit-overflow-scrolling: touch;
           text-align: left;
+
+          /* Hide scrollbar for WebKit (Chrome, Safari, Edge) */
         }
+        .project-timeline-list::-webkit-scrollbar {
+          display: none;
+        }
+
+        /* Hide scrollbar for Firefox */
+        .project-timeline-list {
+          scrollbar-width: none; /* Firefox */
+          -ms-overflow-style: none; /* IE 10+ */
+        }
+
 
         .project-item {
           display: flex;
@@ -487,7 +499,7 @@ const Styles = () => (
         }
 
         .project-details h3 {
-          font-size: 5vw;
+          font-size: 4.2vw;
           margin-bottom: 0.8vw;
           font-weight: 600;
         }
@@ -726,12 +738,12 @@ const Styles = () => (
         }
 
         .project-timeline-heading-mobile {
-          font-size: 5.1vw;
+          font-size: 4.1vw;
           width: 40%;
         }
 
         .project-timeline-heading-mobile p {
-          font-size: 2.8vw;
+          font-size: 2.3vw;
         }
 
         .project-timeline-list {
