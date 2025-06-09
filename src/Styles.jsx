@@ -70,6 +70,8 @@ const Styles = () => (
         padding-left: 1.5vw;
         transition: transform 0.3s ease;
         color: #F5F5F5;
+        text-align: left;
+        width: 100%;
       }
 
       .project-details.selected {
@@ -368,28 +370,101 @@ const Styles = () => (
           margin: 0;
         }
 
-        .project-item {
-          flex-direction: row;
+        /* Timeline Area and Strip */
+        .timeline-area {
+          background-color: #3F3124; /* Dark brown background for mobile timeline */
+          padding: 8vw 4.3vw; /* Add padding to the timeline area */
+          position: relative; /* Establish positioning context for the pseudo-element */
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          height: auto;
+          z-index: 1;
+        }
+
+        .timeline-area::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          width: calc(4.3vw + 10vw + 3vw); /* Reduced width for the orange strip: Left padding + reduced project-number width + margin-right of project-number */
+          background-color: #E45310; /* Orange strip color */
+          z-index: 0; /* Behind the content */
+        }
+
+        .timeline-content {
+          background: transparent; /* Ensure background is transparent to show ::before */
+          color: #F5F5F5;
+          padding: 0; /* Remove padding here as it's on timeline-area */
+          display: flex;
+          flex-direction: row-reverse; /* Change to row-reverse to put numbers on left and heading on right */
+          height: auto;
+          position: relative;
+          gap: 0; /* Adjust gap as needed */
+          width: 100%;
+          justify-content: space-between;
           align-items: flex-start;
-          padding: 3.2vw 0;
-          margin: 0 3.2vw;
-          background: transparent;
-          border-radius: 0;
+        }
+
+        .project-timeline-heading-mobile {
+          color: #E45310;
+          font-size: 7vw;
+          font-weight: 800;
+          line-height: 1.2;
+          letter-spacing: 0.01em;
+          text-align: right;
+          margin-bottom: 5vw;
+          position: relative;
+          z-index: 3;
+          width: 35%; /* Adjust width to make space for project numbers */
+          padding: 2vw; /* Keep existing padding */
+          flex-shrink: 0;
+        }
+
+        .project-timeline-heading-mobile p {
+          color: #F5F5F5;
+          font-size: 3.5vw;
+          margin-top: 1vw;
+          font-weight: normal;
+        }
+
+        .project-timeline-list {
+          display: flex;
+          flex-direction: column;
+          gap: 3.2vw;
+          overflow-y: auto;
+          overflow-x: hidden;
+          height: auto;
+          max-height: 50vh;
+          padding-right: 2.1vw;
+          padding-bottom: 6.4vw;
+          position: relative;
+          z-index: 2;
+          width: 65%; /* Adjust width to fill remaining space */
+          -webkit-overflow-scrolling: touch;
+          text-align: left;
+        }
+
+        .project-item {
+          display: flex;
+          align-items: flex-start;
+          margin-bottom: 8vw;
+          position: relative;
         }
 
         .project-number {
           color: #FF554B;
-          font-size: 5.3vw;
-          font-weight: 700;
-          text-align: center;
-          width: 10.7vw;
-          height: auto;
-          border-radius: 0;
-          margin-right: 2.1vw;
-          display: block;
-          box-shadow: none;
+          font-size: 8vw;
+          width: 17vw;
+          text-align: left;
+          margin-right: 3vw;
           position: relative;
-          z-index: 2;
+          z-index: 1;
+          height: auto;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
         }
 
         .project-number.selected {
@@ -399,10 +474,12 @@ const Styles = () => (
         .project-details {
           padding-left: 0;
           color: #F5F5F5;
-          font-size: 4vw;
+          font-size: 5vw;
           font-weight: 500;
           position: relative;
           z-index: 2;
+          text-align: left;
+          width: 100%;
         }
 
         .project-details.selected {
@@ -410,20 +487,20 @@ const Styles = () => (
         }
 
         .project-details h3 {
-          font-size: 4.5vw;
+          font-size: 5vw;
           margin-bottom: 0.8vw;
           font-weight: 600;
         }
 
         .project-details p {
-          font-size: 3.9vw;
+          font-size: 3.5vw;
           margin-bottom: 0;
           color: #ccc;
         }
 
         .project-details img {
-          width: 6.7vw;
-          height: 4vw;
+          width: 12vw;
+          height: 8vw;
           margin-bottom: 0.5vw;
           object-fit: contain;
         }
@@ -580,74 +657,12 @@ const Styles = () => (
           width: 100%;
         }
 
-        .timeline-area {
-          display: flex;
-          flex-direction: column;
-          width: 100%;
-          align-items: stretch;
-          margin: 0;
-          padding: 0;
-          background: #3F3124;
-          height: auto;
-          position: relative;
-          z-index: 1;
-        }
-
         /* When a project is selected, fix the timeline area at the bottom */
         .project-selected .timeline-area {
           position: fixed;
           bottom: 0;
           width: 100%;
           z-index: 100;
-        }
-
-        .timeline-content {
-          background: #3F3124;
-          color: #F5F5F5;
-          padding: 4.8vw 3.2vw 0.4vw 3.2vw;
-          display: flex;
-          flex-direction: row;
-          height: auto;
-          position: relative;
-          gap: 2vw;
-        }
-
-        .project-timeline-heading-mobile {
-          color: #E45310;
-          font-size: 4.8vw;
-          font-weight: 800;
-          text-align: left;
-          display: block;
-          position: sticky;
-          top: 0;
-          background: #3F3124;
-          z-index: 3;
-          width: 35%;
-          padding: 2vw;
-          line-height: 1.2;
-          flex-shrink: 0;
-        }
-
-        .project-timeline-heading-mobile p {
-          font-size: 2.5vw;
-          margin-top: 1vw;
-          font-weight: normal;
-        }
-
-        .project-timeline-list {
-          display: flex;
-          flex-direction: column;
-          gap: 3.2vw;
-          overflow-y: auto;
-          overflow-x: hidden;
-          height: auto;
-          max-height: 50vh;
-          padding-right: 2.1vw;
-          padding-bottom: 6.4vw;
-          position: relative;
-          z-index: 2;
-          width: 65%;
-          -webkit-overflow-scrolling: touch;
         }
       }
 
@@ -684,7 +699,7 @@ const Styles = () => (
 
         .project-number {
           font-size: 5.6vw;
-          width: 11.2vw;
+          width: 13vw;
         }
 
         .project-details {
@@ -700,8 +715,8 @@ const Styles = () => (
         }
 
         .project-details img {
-          width: 7.2vw;
-          height: 4.3vw;
+          width: 10vw;
+          height: 6vw;
         }
 
         .nav-button {
