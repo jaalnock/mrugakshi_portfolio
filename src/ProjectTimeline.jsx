@@ -25,64 +25,90 @@ const ProjectTimeline = ({
           </p>
         </div>
         <div className="project-timeline-list">
-          {projects.map((project) => (
-            <div className="project-item" key={project.id}>
-              <span
-                className={`project-number${
-                  selectedProject?.id === project.id ? " selected" : ""
-                }`}
-              >
-                {String(project.id).padStart(2, "0")}
-              </span>
-              <div
-                className={`project-details${
-                  selectedProject?.id === project.id ? " selected" : ""
-                }`}
-                onClick={() => handleProjectClick(project)}
-              >
-                {project.logo && project.logo !== null && (
-                  <img src={project.logo} alt={`${project.title} logo`} />
+          {[...projects]
+            .slice()
+            .reverse()
+            .map((project, index) => (
+              <React.Fragment key={project.id}>
+                <div className="project-item">
+                  <span
+                    className={`project-number${
+                      selectedProject?.id === project.id ? " selected" : ""
+                    }`}
+                  >
+                    {String(project.id).padStart(2, "0")}
+                  </span>
+                  <div
+                    className={`project-details${
+                      selectedProject?.id === project.id ? " selected" : ""
+                    }`}
+                    onClick={() => handleProjectClick(project)}
+                  >
+                    {project.logo && (
+                      <img src={project.logo} alt={`${project.title} logo`} />
+                    )}
+                    <h3 className="text-lg font-semibold mb-1">
+                      {project.title}
+                    </h3>
+                  </div>
+                </div>
+
+                {index === 8 && (
+                  <hr className="my-4 border-t-4 border-orange-500 w-full" />
                 )}
-                <h3 className="text-lg font-semibold mb-1">{project.title}</h3>
-                <p className="text-xs mb-1">{project.date}</p>
-              </div>
-            </div>
-          ))}
+              </React.Fragment>
+            ))}
         </div>
       </div>
     ) : (
       <>
         <div className="vertical-strip"></div>
         <div className="flex flex-col py-12" style={{ rowGap: "6vw" }}>
-          {projects.map((project) => (
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              key={project.id}
-              className="project-item cursor-pointer flex items-start"
-              onClick={() => handleProjectClick(project)}
-            >
-              <div
-                className={`project-number ${
-                  selectedProject?.id === project.id ? "selected" : ""
-                }`}
-                style={{ flexShrink: 0 }}
-              >
-                {String(project.id).padStart(2, "0")}
-              </div>
-              <div
-                className={`project-details ${
-                  selectedProject?.id === project.id ? "selected" : ""
-                }`}
-                style={{ marginLeft: "0.5vw" }}
-              >
-                {project.logo && project.logo !== null && (
-                  <img src={project.logo} alt={`${project.title} logo`} />
+          {[...projects]
+            .slice()
+            .reverse()
+            .map((project, index) => (
+              <React.Fragment key={project.id}>
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  className="project-item cursor-pointer flex items-start"
+                  onClick={() => handleProjectClick(project)}
+                >
+                  <div
+                    className={`project-number ${
+                      selectedProject?.id === project.id ? "selected" : ""
+                    }`}
+                    style={{ flexShrink: 0 }}
+                  >
+                    {String(project.id).padStart(2, "0")}
+                  </div>
+                  <div
+                    className={`project-details ${
+                      selectedProject?.id === project.id ? "selected" : ""
+                    }`}
+                    style={{ marginLeft: "0.5vw" }}
+                  >
+                    {project.logo && (
+                      <img
+                        src={project.logo}
+                        alt={`${project.title} logo`}
+                        className="mb-1"
+                      />
+                    )}
+                    <h3 className="text-xl font-semibold mb-1">
+                      {project.title}
+                    </h3>
+                  </div>
+                </motion.div>
+
+                {index === 8 && (
+                  <hr
+                    className="my-0 border-t-4 w-[90%] mx-auto"
+                    style={{ borderColor: "#E45310" }}
+                  />
                 )}
-                <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
-                <p className="text-sm mb-1">{project.date}</p>
-              </div>
-            </motion.div>
-          ))}
+              </React.Fragment>
+            ))}
         </div>
       </>
     )}
