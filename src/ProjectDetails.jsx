@@ -32,28 +32,29 @@ const ProjectDetails = ({
         <h2 className="text-[#E45310] text-2xl font-bold">{project.title}</h2>
       </div>
       {/* <p className="text-[#E45310] text-md mb-4 mt-2">{project.details}</p> */}
-      <div className="flex flex-wrap gap-x-10 gap-y-2 text-sm text-gray-700 font-poppins mt-4">
+      <div className="grid grid-cols-2 gap-x-8 gap-y-3 text-sm text-gray-700 font-poppins mt-4">
         {project.productionHouse && (
-          <div className="min-w-[180px]">
-            <span className="font-semibold">Production House</span> |{" "}
-            {project.productionHouse}
+          <div className="flex">
+            <span className="font-semibold">Production House</span>
+            <span>| {project.productionHouse}</span>
           </div>
         )}
         {project.director && (
-          <div className="min-w-[180px]">
-            <span className="font-semibold">Director</span> | {project.director}
+          <div className="flex">
+            <span className="font-semibold">Director</span>
+            <span>| {project.director}</span>
           </div>
         )}
         {project.Cinematographer && (
-          <div className="min-w-[180px]">
-            <span className="font-semibold">Cinematographer</span> |{" "}
-            {project.Cinematographer}
+          <div className="flex">
+            <span className="font-semibold">Cinematographer</span>
+            <span>| {project.Cinematographer}</span>
           </div>
         )}
         {project.designation && (
-          <div className="min-w-[180px]">
-            <span className="font-semibold">Designation</span> |{" "}
-            {project.designation}
+          <div className="flex">
+            <span className="font-semibold">Designation</span>
+            <span>| {project.designation}</span>
           </div>
         )}
       </div>

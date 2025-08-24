@@ -122,53 +122,59 @@ import img1205r from "./assets/images/12/5r.webp";
 
 // Define project data array
 export const projects = [
+  // ADS CATEGORY
   {
     id: 1,
-    title: "ctrl + alt + believe (Mother's Day)",
+    title: "CTRL + ALT + BELIEVE (Mother's Day)",
+    category: "Ads",
     date: "08.11.2024",
     details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     logo: null,
-    productionHouse: "",
-    director: "",
-    Cinematographer: "",
-    designation: "",
+    productionHouse: "Star Hopper Studio",
+    director: "Varsha",
+    Cinematographer: "Yash Kamat",
+    designation: "Production Designer",
   },
   {
     id: 2,
     title: "Superdry Denim",
+    category: "Ads",
     date: "04.03.2024",
     details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     logo: logo02,
-    productionHouse: "",
-    director: "",
-    Cinematographer: "",
-    designation: "",
+    productionHouse: "Supari Studios",
+    director: "Ria Singh",
+    Cinematographer: "Kaushal Shah",
+    designation: "Production Designer",
   },
   {
     id: 3,
-    title: "Volkswagen ",
-    date: "01.01.2024",
+    title: "Spotify",
+    category: "Ads",
+    date: "27.09.2024",
     details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    logo: logo03,
-    productionHouse: "Method",
-    director: "Sapna Singh",
-    Cinematographer: "Aadi Iyer",
+    logo: logo04,
+    productionHouse: "Supari Studios",
+    director: "B2gether Pros",
+    Cinematographer: "Navjot Baidwan",
     designation: "Production Designer",
   },
   {
     id: 4,
-    title: "Spotify",
-    date: "27.09.2024",
+    title: "Jio 45th Annual Meeting",
+    category: "Ads",
+    date: "03.3.2024",
     details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    logo: logo04,
-    productionHouse: "",
-    director: "",
-    Cinematographer: "",
-    designation: "",
+    logo: null,
+    productionHouse: "Jugaad Motion Pictures",
+    director: "Aadi Iyer",
+    Cinematographer: "Rajiv Malu",
+    designation: "Production Designer",
   },
   {
     id: 5,
-    title: "Mothers recipe",
+    title: "Mothers Recipe",
+    category: "Ads",
     date: "24.07.2024",
     details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     logo: null,
@@ -180,6 +186,7 @@ export const projects = [
   {
     id: 6,
     title: "Sansui AC",
+    category: "Ads",
     date: "03.02.2024",
     details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     logo: logo06,
@@ -190,18 +197,20 @@ export const projects = [
   },
   {
     id: 7,
-    title: "Jio",
-    date: "03.3.2024",
+    title: "Volkswagen Diwali",
+    category: "Ads",
+    date: "01.01.2024",
     details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    logo: null,
-    productionHouse: "Jugaad Motion Pictures",
-    director: "Aadi Iyer",
-    Cinematographer: "Rajiv Malu",
+    logo: logo03,
+    productionHouse: "Method",
+    director: "Sapna Singh",
+    Cinematographer: "Aadi Iyer",
     designation: "Production Designer",
   },
   {
     id: 8,
-    title: "Fit Bit",
+    title: "Fitbit",
+    category: "Ads",
     date: "18.02.2024",
     details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     logo: logo08,
@@ -212,7 +221,8 @@ export const projects = [
   },
   {
     id: 9,
-    title: "3M science",
+    title: "3M Science",
+    category: "Ads",
     date: "05.01.2024",
     details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     logo: logo09,
@@ -221,9 +231,100 @@ export const projects = [
     Cinematographer: "",
     designation: "Production Designer",
   },
+  
+  // MUSIC VIDEO CATEGORY
   {
-    id: 10,
-    title: "19 years in Versova (short film)",
+    id: 1,
+    title: "Aisi woh Baarish - Twin Strings",
+    category: "Music Video",
+    date: "21.06.2024",
+    details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    logo: null,
+    productionHouse: "Sunshine Motion Pictures",
+    director: "Heem Verma",
+    Cinematographer: "Vishnu Dev",
+    designation: "Production Designer",
+  },
+  
+  // LONG FORMAT CATEGORY
+  {
+    id: 1,
+    title: "Words of Pride",
+    category: "Long Format",
+    date: "21.06.2024",
+    details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    logo: null,
+    productionHouse: "",
+    director: "",
+    Cinematographer: "",
+    designation: "",
+  },
+  {
+    id: 2,
+    title: "Homebound",
+    category: "Long Format",
+    date: "21.06.2024",
+    details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    logo: null,
+    productionHouse: "",
+    director: "",
+    Cinematographer: "",
+    designation: "",
+  },
+  {
+    id: 3,
+    title: "Maidan",
+    category: "Long Format",
+    date: "21.06.2024",
+    details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    logo: null,
+    productionHouse: "",
+    director: "",
+    Cinematographer: "",
+    designation: "",
+  },
+  {
+    id: 4,
+    title: "Love Hospital",
+    category: "Long Format",
+    date: "21.06.2024",
+    details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    logo: null,
+    productionHouse: "",
+    director: "",
+    Cinematographer: "",
+    designation: "",
+  },
+  {
+    id: 5,
+    title: "Moving In with Maliaka",
+    category: "Long Format",
+    date: "21.06.2024",
+    details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    logo: null,
+    productionHouse: "",
+    director: "",
+    Cinematographer: "",
+    designation: "",
+  },
+  {
+    id: 6,
+    title: "Clutch",
+    category: "Long Format",
+    date: "21.06.2024",
+    details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    logo: null,
+    productionHouse: "",
+    director: "",
+    Cinematographer: "",
+    designation: "",
+  },
+  
+  // SHORT FILMS CATEGORY
+  {
+    id: 1,
+    title: "19 Years - Short Film",
+    category: "Short Films",
     date: "21.06.2024",
     details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     logo: null,
@@ -233,19 +334,9 @@ export const projects = [
     designation: "Production Designer",
   },
   {
-    id: 11,
-    title: "Aisi woh Barish (music video)",
-    date: "21.06.2024",
-    details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    logo: null,
-    productionHouse: "Sunshine Motion Pictures",
-    director: "Heem Verma",
-    Cinematographer: "Vishnu Dev",
-    designation: "Production Designer",
-  },
-  {
-    id: 12,
-    title: "How not to deal with grief (short film)",
+    id: 2,
+    title: "How Not to Deal with Grief",
+    category: "Short Films",
     date: "21.06.2024",
     details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     logo: null,
@@ -256,9 +347,10 @@ export const projects = [
   },
 ];
 
-// Project-specific media content
+// Project-specific media content using category + id as key
 export const projectSpecificContent = {
-  1: [
+  // ADS CATEGORY
+  "Ads_1": [ // CTRL + ALT + DELETE
     { type: "video", src: vid0101c, span: true },
     { type: "image", src: img0101l, span: false },
     { type: "image", src: img0101r, span: false },
@@ -267,7 +359,7 @@ export const projectSpecificContent = {
     { type: "image", src: img0103l, span: false },
     { type: "image", src: img0103r, span: false },
   ],
-  2: [
+  "Ads_2": [ // Superdry Denim
     { type: "video", src: vid0201c, span: true },
     { type: "image", src: img0201l, span: false },
     { type: "image", src: img0201r, span: false },
@@ -281,16 +373,7 @@ export const projectSpecificContent = {
     { type: "image", src: img0205r, span: false },
     { type: "image", src: img0206c, span: true },
   ],
-  3: [
-    { type: "video", src: vid0301c, span: true },
-    { type: "image", src: img0301l, span: false },
-    { type: "image", src: img0301r, span: false },
-    { type: "video", src: vid0302c, span: true },
-    { type: "image", src: img0302l, span: false },
-    { type: "image", src: img0302r, span: false },
-    { type: "video", src: vid0303c, span: true },
-  ],
-  4: [
+  "Ads_3": [ // Spotify
     { type: "video", src: vid0401c, span: true },
     { type: "image", src: img0401l, span: false },
     { type: "image", src: img0401r, span: false },
@@ -301,7 +384,8 @@ export const projectSpecificContent = {
     { type: "image", src: img0404l, span: false },
     { type: "image", src: img0404r, span: false },
   ],
-  5: [
+  "Ads_4": [], // Jio 45th Annual Meeting - No media yet
+  "Ads_5": [ // Mothers Recipe
     { type: "video", src: vid0501c, span: true },
     { type: "image", src: img0501l, span: false },
     { type: "image", src: img0501r, span: false },
@@ -310,7 +394,7 @@ export const projectSpecificContent = {
     { type: "image", src: img0503l, span: false },
     { type: "image", src: img0503r, span: false },
   ],
-  6: [
+  "Ads_6": [ // Sansui AC
     { type: "video", src: vid0601c, span: true },
     { type: "image", src: img0601l, span: false },
     { type: "image", src: img0601r, span: false },
@@ -319,43 +403,32 @@ export const projectSpecificContent = {
     { type: "image", src: img0603l, span: false },
     { type: "image", src: img0603r, span: false },
   ],
-  7: [
-    { type: "image", src: img0701l, span: false },
-    { type: "image", src: img0701r, span: false },
-    { type: "image", src: img0702l, span: false },
-    { type: "image", src: img0702r, span: false },
-    { type: "image", src: img0703l, span: false },
-    { type: "image", src: img0703r, span: false },
-    { type: "image", src: img0704l, span: false },
-    { type: "image", src: img0704r, span: false },
+  "Ads_7": [ // Volkswagen Diwali
+    { type: "video", src: vid0301c, span: true },
+    { type: "image", src: img0301l, span: false },
+    { type: "image", src: img0301r, span: false },
+    { type: "video", src: vid0302c, span: true },
+    { type: "image", src: img0302l, span: false },
+    { type: "image", src: img0302r, span: false },
+    { type: "video", src: vid0303c, span: true },
   ],
-  8: [
+  "Ads_8": [ // Fitbit
     { type: "video", src: vid0801c, span: true },
     { type: "image", src: img0801l, span: false },
     { type: "image", src: img0801r, span: false },
     { type: "image", src: img0802l, span: false },
     { type: "image", src: img0802r, span: false },
   ],
-  9: [
+  "Ads_9": [ // 3M Science
     { type: "video", src: vid0901c, span: true },
     { type: "image", src: img0901c, span: false },
     { type: "image", src: img0902l, span: false },
     { type: "image", src: img0902r, span: false },
     { type: "image", src: img0903c, span: true },
   ],
-  10: [
-    { type: "image", src: img1001l, span: false },
-    { type: "image", src: img1001r, span: false },
-    { type: "image", src: img1002l, span: false },
-    { type: "image", src: img1002r, span: false },
-    { type: "image", src: img1003l, span: false },
-    { type: "image", src: img1003r, span: false },
-    { type: "image", src: img1004l, span: false },
-    { type: "image", src: img1004r, span: false },
-    { type: "image", src: img1005l, span: false },
-    { type: "image", src: img1005r, span: false },
-  ],
-  11: [
+  
+  // MUSIC VIDEO CATEGORY
+  "Music Video_1": [ // Aisi woh Baarish - Twin Strings
     { type: "video", src: vid1101c, span: true },
     { type: "image", src: img1102l, span: false },
     { type: "image", src: img1102r, span: false },
@@ -367,7 +440,29 @@ export const projectSpecificContent = {
     { type: "image", src: img1105r, span: false },
     { type: "image", src: img1106c, span: true },
   ],
-  12: [
+  
+  // LONG FORMAT CATEGORY - No media yet
+  "Long Format_1": [], // Words of Pride
+  "Long Format_2": [], // Homebound
+  "Long Format_3": [], // Maidan
+  "Long Format_4": [], // Love Hospital
+  "Long Format_5": [], // Moving In with Maliaka
+  "Long Format_6": [], // Clutch
+  
+  // SHORT FILMS CATEGORY
+  "Short Films_1": [ // 19 Years - Short Film
+    { type: "image", src: img1001l, span: false },
+    { type: "image", src: img1001r, span: false },
+    { type: "image", src: img1002l, span: false },
+    { type: "image", src: img1002r, span: false },
+    { type: "image", src: img1003l, span: false },
+    { type: "image", src: img1003r, span: false },
+    { type: "image", src: img1004l, span: false },
+    { type: "image", src: img1004r, span: false },
+    { type: "image", src: img1005l, span: false },
+    { type: "image", src: img1005r, span: false },
+  ],
+  "Short Films_2": [ // How Not to Deal with Grief
     { type: "video", src: vid1201c, span: true },
     { type: "image", src: img1201l, span: false },
     { type: "image", src: img1201r, span: false },

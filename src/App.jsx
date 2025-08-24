@@ -22,7 +22,7 @@ const App = () => {
   // Memoize mediaContent to ensure stable reference
   const mediaContent = useMemo(
     () =>
-      selectedProject ? projectSpecificContent[selectedProject.id] || [] : [],
+      selectedProject ? projectSpecificContent[`${selectedProject.category}_${selectedProject.id}`] || [] : [],
     [selectedProject]
   );
 

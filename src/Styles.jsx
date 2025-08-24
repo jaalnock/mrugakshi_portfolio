@@ -80,12 +80,32 @@ const Styles = () => (
 
       .project-item {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         position: relative;
       }
 
       .project-item:hover .project-details {
         transform: scale(1.02);
+      }
+
+      .category-header {
+        margin-bottom: 0;
+        margin-top: 0.5vw;
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+      }
+
+      .category-header h2 {
+        color: #E45310;
+        font-size: 2.5vw;
+        font-weight: 700;
+        text-align: left;
+        margin-bottom: 0.5vw;
+        font-family: 'Poppins', sans-serif;
+        margin-left: 7vw;
+        padding-left: 1.5vw;
+        width: 100%;
       }
 
       /* About Section Styles (Desktop) */
@@ -460,7 +480,7 @@ const Styles = () => (
 
         .project-item {
           display: flex;
-          align-items: flex-start;
+          align-items: center;
           margin-bottom: 8vw;
           position: relative;
         }
@@ -496,6 +516,26 @@ const Styles = () => (
 
         .project-details.selected {
           color: white;
+        }
+
+        .category-header-mobile {
+          margin-bottom: 0;
+          margin-top: 0.5vw;
+          display: flex;
+          align-items: flex-start;
+          position: relative;
+        }
+
+        .category-header-mobile h2 {
+          color: #E45310;
+          font-size: 6vw;
+          font-weight: 700;
+          text-align: left;
+          margin-bottom: 0.5vw;
+          font-family: 'Poppins', sans-serif;
+          margin-left: 17vw;
+          padding-left: 0;
+          width: 100%;
         }
 
         .project-details h3 {
