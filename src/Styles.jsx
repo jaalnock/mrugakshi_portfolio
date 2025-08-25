@@ -98,7 +98,7 @@ const Styles = () => (
 
       .category-header h2 {
         color: #E45310;
-        font-size: 2.5vw;
+        font-size: 2.1vw;
         font-weight: 700;
         text-align: left;
         margin-bottom: 0.5vw;
@@ -106,6 +106,8 @@ const Styles = () => (
         margin-left: 7vw;
         padding-left: 1.5vw;
         width: 100%;
+        white-space: nowrap;
+        overflow: visible;
       }
 
       /* About Section Styles (Desktop) */

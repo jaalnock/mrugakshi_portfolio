@@ -23,6 +23,13 @@ const ProjectTimeline = ({
 
   const categories = ["Ads", "Music Video", "Long Format", "Short Films"];
 
+  const displayNames = {
+    "Ads": "Advertisement",
+    "Music Video": "Music Video",
+    "Long Format": "Long Format",
+    "Short Films": "Short Films"
+  };
+
   return (
     <div
       className={
@@ -48,7 +55,7 @@ const ProjectTimeline = ({
                   <>
                     <div className="category-header-mobile">
                       <h2 className="text-lg font-bold text-orange-500 mb-2 text-left">
-                        {category}
+                      {displayNames[category]}
                       </h2>
                     </div>
                     {groupedProjects[category].map((project, index) => (
@@ -91,7 +98,7 @@ const ProjectTimeline = ({
                   <>
                     <div className="category-header">
                       <h2 className="text-2xl font-bold text-orange-500 mb-4 text-left">
-                        {category}
+                      {displayNames[category]}
                       </h2>
                     </div>
                     {groupedProjects[category].map((project, index) => (
