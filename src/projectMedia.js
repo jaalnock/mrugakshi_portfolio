@@ -120,9 +120,16 @@ import img1205l from "./assets/images/12/5l.webp";
 import img1205r from "./assets/images/12/5r.webp";
 // import logo12 from "./assets/logos/12.png";
 
+import vid03_01_01c from "./assets/videos/3.1/1c.mp4";
+// import vid03_02_01c from "./assets/videos/03/02/01c.mp4";
+import vid03_03_01c from "./assets/videos/3.3/1c.mp4";
+import vid03_04_01c from "./assets/videos/3.4/1c.mp4";
+import vid03_05_01c from "./assets/videos/3.5/1c.mp4";
+import vid03_06_01c from "./assets/videos/3.6/1c.mp4";
+
 // Define project data array
 export const projects = [
-  // ADS CATEGORY
+  // 01. ADS CATEGORY
   {
     id: 1,
     title: "CTRL + ALT + BELIEVE (Mother's Day)",
@@ -232,7 +239,7 @@ export const projects = [
     designation: "Production Designer",
   },
   
-  // MUSIC VIDEO CATEGORY
+  // 02. MUSIC VIDEO CATEGORY
   {
     id: 1,
     title: "Aisi woh Baarish - Twin Strings",
@@ -246,7 +253,7 @@ export const projects = [
     designation: "Production Designer",
   },
   
-  // LONG FORMAT CATEGORY
+  // 03. LONG FORMAT CATEGORY
   {
     id: 1,
     title: "Words of Pride",
@@ -254,10 +261,10 @@ export const projects = [
     date: "21.06.2024",
     details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     logo: null,
-    productionHouse: "",
-    director: "",
-    Cinematographer: "",
-    designation: "",
+    productionHouse: "Star Hopper Studio",
+    director: "Varsha",
+    Cinematographer: "Vandita Jain",
+    designation: "Production Designer",
   },
   {
     id: 2,
@@ -266,10 +273,12 @@ export const projects = [
     date: "21.06.2024",
     details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     logo: null,
-    productionHouse: "",
-    director: "",
-    Cinematographer: "",
-    designation: "",
+    productionHouse: "Dharma Productions",
+    year: "2024",
+    director: "Neeraj Gaiwan",
+    Cinematographer: "Pratik Shah",
+    productionDesigner : "Khyatee Kanchan",
+    designation: "Set Decorator",
   },
   {
     id: 3,
@@ -278,10 +287,12 @@ export const projects = [
     date: "21.06.2024",
     details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     logo: null,
-    productionHouse: "",
-    director: "",
-    Cinematographer: "",
-    designation: "",
+    productionHouse: "Bayview Production",
+    year: "2019 - 2022",
+    director: "Amit Ravindra Sharma",
+    Cinematographer: "Tushar Kanti Ray",
+    productionDesigner : "Khyatee Kanchan",
+    designation: "Art Assistant",
   },
   {
     id: 4,
@@ -290,10 +301,12 @@ export const projects = [
     date: "21.06.2024",
     details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     logo: null,
-    productionHouse: "",
-    director: "",
-    Cinematographer: "",
-    designation: "",
+    productionHouse: "Drishyam Production / Red chillies",
+    year: "2021",
+    director: "Shanker Raman",
+    Cinematographer: "Vivek Shah",
+    productionDesigner : "Mausam Agarwal",
+    designation: "On Set Dresser",
   },
   {
     id: 5,
@@ -302,10 +315,12 @@ export const projects = [
     date: "21.06.2024",
     details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     logo: null,
-    productionHouse: "",
-    director: "",
-    Cinematographer: "",
-    designation: "",
+    productionHouse: "Banijay Asia",
+    year: "2022",
+    director: "Khuzema Haveliwala",
+    Cinematographer: "Srinivas Ramaiah ",
+    productionDesigner : "Snehi Shah",
+    designation: "Set Dresser",
   },
   {
     id: 6,
@@ -314,13 +329,15 @@ export const projects = [
     date: "21.06.2024",
     details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     logo: null,
-    productionHouse: "",
-    director: "",
-    Cinematographer: "",
-    designation: "",
+    productionHouse: "Dice Media Production",
+    year: "2021",
+    director: "Ruchir Arun",
+    Cinematographer: "Anirudh Patankar",
+    productionDesigner : "Snehi Shah",
+    designation: "On Set Dresser",
   },
   
-  // SHORT FILMS CATEGORY
+  // 04. SHORT FILMS CATEGORY
   {
     id: 1,
     title: "19 Years - Short Film",
@@ -349,7 +366,7 @@ export const projects = [
 
 // Project-specific media content using category + id as key
 export const projectSpecificContent = {
-  // ADS CATEGORY
+  // 01. ADS CATEGORY
   "Ads_1": [ // CTRL + ALT + DELETE
     { type: "video", src: vid0101c, span: true },
     { type: "image", src: img0101l, span: false },
@@ -384,7 +401,16 @@ export const projectSpecificContent = {
     { type: "image", src: img0404l, span: false },
     { type: "image", src: img0404r, span: false },
   ],
-  "Ads_4": [], // Jio 45th Annual Meeting - No media yet
+  "Ads_4": [ // Jio 45th Annual Meeting 
+    { type: "image", src: img0701l, span: false },
+    { type: "image", src: img0701r, span: false },
+    { type: "image", src: img0702l, span: false },
+    { type: "image", src: img0702r, span: false },
+    { type: "image", src: img0703l, span: false },
+    { type: "image", src: img0703r, span: false },
+    { type: "image", src: img0704l, span: false },
+    { type: "image", src: img0704r, span: false }
+  ], 
   "Ads_5": [ // Mothers Recipe
     { type: "video", src: vid0501c, span: true },
     { type: "image", src: img0501l, span: false },
@@ -427,7 +453,7 @@ export const projectSpecificContent = {
     { type: "image", src: img0903c, span: true },
   ],
   
-  // MUSIC VIDEO CATEGORY
+  // 02. MUSIC VIDEO CATEGORY
   "Music Video_1": [ // Aisi woh Baarish - Twin Strings
     { type: "video", src: vid1101c, span: true },
     { type: "image", src: img1102l, span: false },
@@ -441,15 +467,26 @@ export const projectSpecificContent = {
     { type: "image", src: img1106c, span: true },
   ],
   
-  // LONG FORMAT CATEGORY - No media yet
-  "Long Format_1": [], // Words of Pride
-  "Long Format_2": [], // Homebound
-  "Long Format_3": [], // Maidan
-  "Long Format_4": [], // Love Hospital
-  "Long Format_5": [], // Moving In with Maliaka
-  "Long Format_6": [], // Clutch
+  // 03. LONG FORMAT CATEGORY - No media yet
+  "Long Format_1": [// Words of Pride
+    { type: "video", src: vid03_01_01c, span: true }
+  ], 
+  "Long Format_2": [  // Homebound
+  ],
+  "Long Format_3": [ // Maidan
+    { type: "video", src: vid03_03_01c, span: true }
+  ], 
+  "Long Format_4": [ // Love Hospital
+    { type: "video", src: vid03_04_01c, span: true }
+  ],
+  "Long Format_5": [ // Moving In with Maliaka
+    { type: "video", src: vid03_05_01c, span: true }
+  ], 
+  "Long Format_6": [ // Clutch
+    { type: "video", src: vid03_06_01c, span: true }
+  ], 
   
-  // SHORT FILMS CATEGORY
+  // 04. SHORT FILMS CATEGORY
   "Short Films_1": [ // 19 Years - Short Film
     { type: "image", src: img1001l, span: false },
     { type: "image", src: img1001r, span: false },

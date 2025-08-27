@@ -39,6 +39,12 @@ const ProjectDetails = ({
             <span>| {project.productionHouse}</span>
           </div>
         )}
+        {project.year && (
+          <div className="flex">
+            <span className="font-semibold">Year</span>
+            <span>| {project.year}</span>
+          </div>
+        )}
         {project.director && (
           <div className="flex">
             <span className="font-semibold">Director</span>
@@ -49,6 +55,12 @@ const ProjectDetails = ({
           <div className="flex">
             <span className="font-semibold">Cinematographer</span>
             <span>| {project.Cinematographer}</span>
+          </div>
+        )}
+        {project.productionDesigner && (
+          <div className="flex">
+            <span className="font-semibold">Production Designer</span>
+            <span>| {project.productionDesigner}</span>
           </div>
         )}
         {project.designation && (
