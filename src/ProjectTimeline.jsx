@@ -24,7 +24,7 @@ const ProjectTimeline = ({
   const categories = ["Ads", "Music Video", "Long Format", "Short Films"];
 
   const displayNames = {
-    "Ads": "Advertisement",
+    "Ads": "Commercials",
     "Music Video": "Music Video",
     "Long Format": "Long Format",
     "Short Films": "Short Films"

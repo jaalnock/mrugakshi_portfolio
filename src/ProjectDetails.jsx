@@ -32,7 +32,7 @@ const ProjectDetails = ({
         <h2 className="text-[#E45310] text-2xl font-bold">{project.title}</h2>
       </div>
       {/* <p className="text-[#E45310] text-md mb-4 mt-2">{project.details}</p> */}
-      <div className="grid grid-cols-2 gap-x-8 gap-y-3 text-sm text-gray-700 font-poppins mt-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 text-sm text-gray-700 font-poppins mt-4">
         {project.productionHouse && (
           <div className="flex">
             <span className="font-semibold">Production House</span>

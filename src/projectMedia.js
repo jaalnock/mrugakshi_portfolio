@@ -268,7 +268,7 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Homebound",
+    title: "Homebound (Festival De Cannes : Un Certain Regard)",
     category: "Long Format",
     date: "21.06.2024",
     details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
@@ -282,7 +282,7 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Maidan",
+    title: "Maidaan",
     category: "Long Format",
     date: "21.06.2024",
     details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
@@ -296,7 +296,7 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Love Hospital",
+    title: "Love Hostel",
     category: "Long Format",
     date: "21.06.2024",
     details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
@@ -340,7 +340,7 @@ export const projects = [
   // 04. SHORT FILMS CATEGORY
   {
     id: 1,
-    title: "19 Years - Short Film",
+    title: "The Second Door ",
     category: "Short Films",
     date: "21.06.2024",
     details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
