@@ -415,18 +415,20 @@ const Styles = () => (
           z-index: 0; /* Behind the content */
         }
 
-        .timeline-content {
+        .timeline-content-mobile {
           background: transparent; /* Ensure background is transparent to show ::before */
           color: #F5F5F5;
           padding: 0; /* Remove padding here as it's on timeline-area */
           display: flex;
           flex-direction: row-reverse; /* Change to row-reverse to put numbers on left and heading on right */
-          height: auto;
+          height: 50vh; /* Set a fixed height to enable scrolling */
           position: relative;
           gap: 0; /* Adjust gap as needed */
           width: 100%;
           justify-content: space-between;
           align-items: flex-start;
+          overflow-y: auto;
+          -webkit-overflow-scrolling: touch;
         }
 
         .project-timeline-heading-mobile {
@@ -451,30 +453,25 @@ const Styles = () => (
           font-weight: normal;
         }
 
-        .project-timeline-list {
+        .project-timeline-list-mobile {
           display: flex;
           flex-direction: column;
           gap: 3.2vw;
-          overflow-y: auto;
-          overflow-x: hidden;
+          overflow: visible;
           height: auto;
-          max-height: 50vh;
           padding-right: 2.1vw;
           padding-bottom: 6.4vw;
           position: relative;
           z-index: 2;
           width: 65%;
-          -webkit-overflow-scrolling: touch;
           text-align: left;
-
-          /* Hide scrollbar for WebKit (Chrome, Safari, Edge) */
         }
-        .project-timeline-list::-webkit-scrollbar {
+        .timeline-content-mobile::-webkit-scrollbar {
           display: none;
         }
 
         /* Hide scrollbar for Firefox */
-        .project-timeline-list {
+        .timeline-content-mobile {
           scrollbar-width: none; /* Firefox */
           -ms-overflow-style: none; /* IE 10+ */
         }
@@ -789,8 +786,7 @@ const Styles = () => (
           font-size: 2.3vw;
         }
 
-        .project-timeline-list {
-          max-height: 35vh;
+        .project-timeline-list-mobile {
           width: 60%;
         }
 

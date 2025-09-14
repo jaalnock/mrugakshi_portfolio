@@ -39,7 +39,7 @@ const ProjectTimeline = ({
       }
     >
       {isMobile ? (
-        <div className="timeline-content">
+        <div className="timeline-content-mobile">
           <div className="project-timeline-heading-mobile">
             Project
             <br />
@@ -48,7 +48,7 @@ const ProjectTimeline = ({
               Click on any project to get a preview!
             </p>
           </div>
-          <div className="project-timeline-list">
+          <div className="project-timeline-list-mobile">
             {categories.map((category) => (
               <React.Fragment key={category}>
                 {groupedProjects[category] && (
