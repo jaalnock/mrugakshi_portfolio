@@ -121,7 +121,7 @@ import img1205r from "./assets/images/12/5r.webp";
 // import logo12 from "./assets/logos/12.png";
 
 import vid03_01_01c from "./assets/videos/3.1/1c.mp4";
-// import vid03_02_01c from "./assets/videos/03/02/01c.mp4";
+import img_lf_02_01c from "./assets/images/lf_02/1c.png";
 import vid03_03_01c from "./assets/videos/3.3/1c.mp4";
 import vid03_04_01c from "./assets/videos/3.4/1c.mp4";
 import vid03_05_01c from "./assets/videos/3.5/1c.mp4";
@@ -238,7 +238,7 @@ export const projects = [
     Cinematographer: "",
     designation: "Production Designer",
   },
-  
+
   // 02. MUSIC VIDEO CATEGORY
   {
     id: 1,
@@ -252,7 +252,7 @@ export const projects = [
     Cinematographer: "Vishnu Dev",
     designation: "Production Designer",
   },
-  
+
   // 03. LONG FORMAT CATEGORY
   {
     id: 1,
@@ -277,7 +277,7 @@ export const projects = [
     year: "2024",
     director: "Neeraj Gaiwan",
     Cinematographer: "Pratik Shah",
-    productionDesigner : "Khyatee Kanchan",
+    productionDesigner: "Khyatee Kanchan",
     designation: "Set Decorator",
   },
   {
@@ -291,7 +291,7 @@ export const projects = [
     year: "2019 - 2022",
     director: "Amit Ravindra Sharma",
     Cinematographer: "Tushar Kanti Ray",
-    productionDesigner : "Khyatee Kanchan",
+    productionDesigner: "Khyatee Kanchan",
     designation: "Art Assistant",
   },
   {
@@ -305,7 +305,7 @@ export const projects = [
     year: "2021",
     director: "Shanker Raman",
     Cinematographer: "Vivek Shah",
-    productionDesigner : "Mausam Agarwal",
+    productionDesigner: "Mausam Agarwal",
     designation: "On Set Dresser",
   },
   {
@@ -319,7 +319,7 @@ export const projects = [
     year: "2022",
     director: "Khuzema Haveliwala",
     Cinematographer: "Srinivas Ramaiah ",
-    productionDesigner : "Snehi Shah",
+    productionDesigner: "Snehi Shah",
     designation: "Set Dresser",
   },
   {
@@ -333,10 +333,10 @@ export const projects = [
     year: "2021",
     director: "Ruchir Arun",
     Cinematographer: "Anirudh Patankar",
-    productionDesigner : "Snehi Shah",
+    productionDesigner: "Snehi Shah",
     designation: "On Set Dresser",
   },
-  
+
   // 04. SHORT FILMS CATEGORY
   {
     id: 1,
@@ -367,7 +367,8 @@ export const projects = [
 // Project-specific media content using category + id as key
 export const projectSpecificContent = {
   // 01. ADS CATEGORY
-  "Ads_1": [ // CTRL + ALT + DELETE
+  Ads_1: [
+    // CTRL + ALT + DELETE
     { type: "video", src: vid0101c, span: true },
     { type: "image", src: img0101l, span: false },
     { type: "image", src: img0101r, span: false },
@@ -376,7 +377,8 @@ export const projectSpecificContent = {
     { type: "image", src: img0103l, span: false },
     { type: "image", src: img0103r, span: false },
   ],
-  "Ads_2": [ // Superdry Denim
+  Ads_2: [
+    // Superdry Denim
     { type: "video", src: vid0201c, span: true },
     { type: "image", src: img0201l, span: false },
     { type: "image", src: img0201r, span: false },
@@ -390,7 +392,8 @@ export const projectSpecificContent = {
     { type: "image", src: img0205r, span: false },
     { type: "image", src: img0206c, span: true },
   ],
-  "Ads_3": [ // Spotify
+  Ads_3: [
+    // Spotify
     { type: "video", src: vid0401c, span: true },
     { type: "image", src: img0401l, span: false },
     { type: "image", src: img0401r, span: false },
@@ -401,7 +404,8 @@ export const projectSpecificContent = {
     { type: "image", src: img0404l, span: false },
     { type: "image", src: img0404r, span: false },
   ],
-  "Ads_4": [ // Jio 45th Annual Meeting 
+  Ads_4: [
+    // Jio 45th Annual Meeting
     { type: "image", src: img0701l, span: false },
     { type: "image", src: img0701r, span: false },
     { type: "image", src: img0702l, span: false },
@@ -409,9 +413,10 @@ export const projectSpecificContent = {
     { type: "image", src: img0703l, span: false },
     { type: "image", src: img0703r, span: false },
     { type: "image", src: img0704l, span: false },
-    { type: "image", src: img0704r, span: false }
-  ], 
-  "Ads_5": [ // Mothers Recipe
+    { type: "image", src: img0704r, span: false },
+  ],
+  Ads_5: [
+    // Mothers Recipe
     { type: "video", src: vid0501c, span: true },
     { type: "image", src: img0501l, span: false },
     { type: "image", src: img0501r, span: false },
@@ -420,7 +425,8 @@ export const projectSpecificContent = {
     { type: "image", src: img0503l, span: false },
     { type: "image", src: img0503r, span: false },
   ],
-  "Ads_6": [ // Sansui AC
+  Ads_6: [
+    // Sansui AC
     { type: "video", src: vid0601c, span: true },
     { type: "image", src: img0601l, span: false },
     { type: "image", src: img0601r, span: false },
@@ -429,7 +435,8 @@ export const projectSpecificContent = {
     { type: "image", src: img0603l, span: false },
     { type: "image", src: img0603r, span: false },
   ],
-  "Ads_7": [ // Volkswagen Diwali
+  Ads_7: [
+    // Volkswagen Diwali
     { type: "video", src: vid0301c, span: true },
     { type: "image", src: img0301l, span: false },
     { type: "image", src: img0301r, span: false },
@@ -438,23 +445,26 @@ export const projectSpecificContent = {
     { type: "image", src: img0302r, span: false },
     { type: "video", src: vid0303c, span: true },
   ],
-  "Ads_8": [ // Fitbit
+  Ads_8: [
+    // Fitbit
     { type: "video", src: vid0801c, span: true },
     { type: "image", src: img0801l, span: false },
     { type: "image", src: img0801r, span: false },
     { type: "image", src: img0802l, span: false },
     { type: "image", src: img0802r, span: false },
   ],
-  "Ads_9": [ // 3M Science
+  Ads_9: [
+    // 3M Science
     { type: "video", src: vid0901c, span: true },
     { type: "image", src: img0901c, span: false },
     { type: "image", src: img0902l, span: false },
     { type: "image", src: img0902r, span: false },
     { type: "image", src: img0903c, span: true },
   ],
-  
+
   // 02. MUSIC VIDEO CATEGORY
-  "Music Video_1": [ // Aisi woh Baarish - Twin Strings
+  "Music Video_1": [
+    // Aisi woh Baarish - Twin Strings
     { type: "video", src: vid1101c, span: true },
     { type: "image", src: img1102l, span: false },
     { type: "image", src: img1102r, span: false },
@@ -466,28 +476,36 @@ export const projectSpecificContent = {
     { type: "image", src: img1105r, span: false },
     { type: "image", src: img1106c, span: true },
   ],
-  
+
   // 03. LONG FORMAT CATEGORY - No media yet
-  "Long Format_1": [// Words of Pride
-    { type: "video", src: vid03_01_01c, span: true }
-  ], 
-  "Long Format_2": [  // Homebound
+  "Long Format_1": [
+    // Words of Pride
+    { type: "video", src: vid03_01_01c, span: true },
   ],
-  "Long Format_3": [ // Maidan
-    { type: "video", src: vid03_03_01c, span: true }
-  ], 
-  "Long Format_4": [ // Love Hospital
-    { type: "video", src: vid03_04_01c, span: true }
+  "Long Format_2": [
+    // Homebound
+    { type: "image", src: img_lf_02_01c, span: false },
   ],
-  "Long Format_5": [ // Moving In with Maliaka
-    { type: "video", src: vid03_05_01c, span: true }
-  ], 
-  "Long Format_6": [ // Clutch
-    { type: "video", src: vid03_06_01c, span: true }
-  ], 
-  
+  "Long Format_3": [
+    // Maidan
+    { type: "video", src: vid03_03_01c, span: true },
+  ],
+  "Long Format_4": [
+    // Love Hospital
+    { type: "video", src: vid03_04_01c, span: true },
+  ],
+  "Long Format_5": [
+    // Moving In with Maliaka
+    { type: "video", src: vid03_05_01c, span: true },
+  ],
+  "Long Format_6": [
+    // Clutch
+    { type: "video", src: vid03_06_01c, span: true },
+  ],
+
   // 04. SHORT FILMS CATEGORY
-  "Short Films_1": [ // 19 Years - Short Film
+  "Short Films_1": [
+    // 19 Years - Short Film
     { type: "image", src: img1001l, span: false },
     { type: "image", src: img1001r, span: false },
     { type: "image", src: img1002l, span: false },
@@ -499,7 +517,8 @@ export const projectSpecificContent = {
     { type: "image", src: img1005l, span: false },
     { type: "image", src: img1005r, span: false },
   ],
-  "Short Films_2": [ // How Not to Deal with Grief
+  "Short Films_2": [
+    // How Not to Deal with Grief
     { type: "video", src: vid1201c, span: true },
     { type: "image", src: img1201l, span: false },
     { type: "image", src: img1201r, span: false },
