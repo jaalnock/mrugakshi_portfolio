@@ -13,7 +13,7 @@ const About = () => (
   >
     <h2 className="about-title">Hi! A little about myself,</h2>
     <p className="about-description">
-      Based in the heart of architectural wonders, Having an extensive
+      Based in the heart of architectural wonders, having an extensive
       knowledge and education in architecture I dedicate my passion to crafting
       stories through the attention to spatial detail and understanding of the
       character narrative. From concept to completion, I'd like to say I drive

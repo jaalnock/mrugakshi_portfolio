@@ -121,6 +121,7 @@ import img1205r from "./assets/images/12/5r.webp";
 // import logo12 from "./assets/logos/12.png";
 
 import vid03_01_01c from "./assets/videos/3.1/1c.mp4";
+import vid03_02_01c from "./assets/videos/3.2/1c.mp4";
 import img_lf_02_01c from "./assets/images/lf_02/1c.png";
 import vid03_03_01c from "./assets/videos/3.3/1c.mp4";
 import vid03_04_01c from "./assets/videos/3.4/1c.mp4";
@@ -484,6 +485,7 @@ export const projectSpecificContent = {
   ],
   "Long Format_2": [
     // Homebound
+    { type: "video", src: vid03_02_01c, span: true },
     { type: "image", src: img_lf_02_01c, span: false },
   ],
   "Long Format_3": [
