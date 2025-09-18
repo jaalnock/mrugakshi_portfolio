@@ -133,7 +133,7 @@ const Styles = () => (
         font-weight: 500;
         color: #666;
         line-height: 1.5;
-        text-align: justify;
+        text-align: left;
         padding: 0 2rem;
         margin-bottom: 2rem;
       }
@@ -344,7 +344,7 @@ const Styles = () => (
         .about-description {
           padding: 0 2.7vw;
           font-size: 3.9vw;
-          text-align: justify;
+          text-align: left;
           line-height: 1.5;
           color: #444;
         }
@@ -738,7 +738,7 @@ const Styles = () => (
 
         .about-description {
           font-size: 4.1vw;
-          text-align: justify;
+          text-align: left;
         }
 
         .contact-item {
