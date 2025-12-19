@@ -466,7 +466,7 @@ export const projectSpecificContent = {
   Ads_1: [
     // California Almonds - Diwali
     // { type: "drive-video", src: "PLACEHOLDER_ID_1", span: true }, // Keep drive video if needed, or switch to local: { type: "video", src: vid0_1_01c, span: true },
-    { type: "video", src: vid0_1_01c, span: true },
+    // { type: "video", src: vid0_1_01c, span: true },
     { type: "image", src: img0_1_01l, span: false },
     { type: "image", src: img0_1_01r, span: false },
     { type: "image", src: img0_1_02l, span: false },
