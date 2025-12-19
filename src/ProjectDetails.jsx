@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { BsPlayCircle } from "react-icons/bs";
 import { FaChevronLeft } from "react-icons/fa";
+import DriveVideo from "./DriveVideo";
 
 const ProjectDetails = ({
   project,

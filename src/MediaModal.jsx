@@ -2,6 +2,7 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import DriveVideo from "./DriveVideo";
 
 const MediaModal = ({
   isOpen,
@@ -51,6 +52,10 @@ const MediaModal = ({
               autoPlay
               controls
             />
+          ) : mediaContent[selectedImageIndex].type === "drive-video" ? (
+            <div className="w-full h-[60vh] rounded-lg shadow-lg bg-black">
+              <DriveVideo fileId={mediaContent[selectedImageIndex].src} />
+            </div>
           ) : (
             <img
               src={mediaContent[selectedImageIndex].src}

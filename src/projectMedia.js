@@ -7,6 +7,39 @@ import img0103l from "./assets/images/01/3l.webp";
 import img0103r from "./assets/images/01/3r.webp";
 // import logo01 from "./assets/logos/01.png";
 
+// Imports for new Ads projects
+import vid0_1_01c from "./assets/videos/0.1/1c.mp4";
+import img0_1_01l from "./assets/images/0.1/1l.webp";
+import img0_1_01r from "./assets/images/0.1/1r.webp";
+import img0_1_02l from "./assets/images/0.1/2l.webp";
+import img0_1_02r from "./assets/images/0.1/2r.webp";
+
+import img0_2_01l from "./assets/images/0.2/1l.webp";
+import img0_2_01r from "./assets/images/0.2/1r.webp";
+import img0_2_02l from "./assets/images/0.2/2l.webp";
+import img0_2_02r from "./assets/images/0.2/2r.webp";
+import img0_2_03l from "./assets/images/0.2/3l.webp";
+import img0_2_03r from "./assets/images/0.2/3r.webp";
+import img0_2_04l from "./assets/images/0.2/4l.webp";
+import img0_2_04r from "./assets/images/0.2/4r.webp";
+
+// Imports for Ads 0.3
+import vid0_3_01c from "./assets/videos/0.3/1c.mp4";
+import vid0_3_06c from "./assets/videos/0.3/6c.mp4";
+import img0_3_01l from "./assets/images/0.3/1l.jpeg";
+import img0_3_01r from "./assets/images/0.3/1r.jpeg";
+import img0_3_02l from "./assets/images/0.3/2l.jpeg";
+import img0_3_02r from "./assets/images/0.3/2r.jpeg";
+import img0_3_03c from "./assets/images/0.3/3c.jpeg";
+import img0_3_04l from "./assets/images/0.3/4l.jpeg";
+import img0_3_04r from "./assets/images/0.3/4r.jpeg";
+import img0_3_05l from "./assets/images/0.3/5l.jpeg";
+import img0_3_05r from "./assets/images/0.3/5r.jpeg";
+import img0_3_06l from "./assets/images/0.3/6l.jpeg";
+import img0_3_06r from "./assets/images/0.3/6r.jpeg";
+import img0_3_07l from "./assets/images/0.3/7l.jpeg";
+import img0_3_07r from "./assets/images/0.3/7r.jpeg";
+
 import vid0201c from "./assets/videos/02/1c.mp4";
 import img0201l from "./assets/images/02/1l.webp";
 import img0201r from "./assets/images/02/1r.webp";
@@ -128,11 +161,60 @@ import vid03_04_01c from "./assets/videos/3.4/1c.mp4";
 import vid03_05_01c from "./assets/videos/3.5/1c.mp4";
 import vid03_06_01c from "./assets/videos/3.6/1c.mp4";
 
+// Imports for Music Video 02 (Nafrat - Darshan Rawal)
+import img_mv_02_01l from "./assets/images/mv_02/1l.jpeg";
+import img_mv_02_01r from "./assets/images/mv_02/1r.jpeg";
+import img_mv_02_02l from "./assets/images/mv_02/2l.jpeg";
+import img_mv_02_02r from "./assets/images/mv_02/2r.jpeg";
+import img_mv_02_03c from "./assets/images/mv_02/3c.jpeg";
+import img_mv_02_04l from "./assets/images/mv_02/4l.jpeg";
+import img_mv_02_04r from "./assets/images/mv_02/4r.jpeg";
+import img_mv_02_05l from "./assets/images/mv_02/5l.jpeg";
+import img_mv_02_05r from "./assets/images/mv_02/5r.jpeg";
+import img_mv_02_06l from "./assets/images/mv_02/6l.jpeg";
+import img_mv_02_06r from "./assets/images/mv_02/6r.jpeg";
+
 // Define project data array
 export const projects = [
   // 01. ADS CATEGORY
   {
     id: 1,
+    title: "California Almonds - Diwali",
+    category: "Ads",
+    date: "2024",
+    details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    logo: null,
+    productionHouse: "Cutting Crew Studio",
+    director: "Sharic Sequeira",
+    Cinematographer: "Shlok Ahuja",
+    designation: "Production Designer",
+  },
+  {
+    id: 2,
+    title: "Dot and Key",
+    category: "Ads",
+    date: "2024",
+    details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    logo: null,
+    productionHouse: "Quercus Production",
+    director: "Sharic Sequeira",
+    Cinematographer: "Shlok Ahuja",
+    designation: "Production Designer",
+  },
+  {
+    id: 3,
+    title: "JIO PC",
+    category: "Ads",
+    date: "2024",
+    details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    logo: null,
+    productionHouse: "Jugaad Motion Pictures",
+    director: "Pranit Shahi",
+    Cinematographer: "Rajiv Malu",
+    designation: "Production Designer",
+  },
+  {
+    id: 4,
     title: "CTRL + ALT + BELIEVE (Mother's Day)",
     category: "Ads",
     date: "08.11.2024",
@@ -144,7 +226,7 @@ export const projects = [
     designation: "Production Designer",
   },
   {
-    id: 2,
+    id: 5,
     title: "Superdry Denim",
     category: "Ads",
     date: "04.03.2024",
@@ -156,7 +238,7 @@ export const projects = [
     designation: "Production Designer",
   },
   {
-    id: 3,
+    id: 6,
     title: "Spotify",
     category: "Ads",
     date: "27.09.2024",
@@ -168,7 +250,7 @@ export const projects = [
     designation: "Production Designer",
   },
   {
-    id: 4,
+    id: 7,
     title: "Jio 45th Annual Meeting",
     category: "Ads",
     date: "03.3.2024",
@@ -180,7 +262,7 @@ export const projects = [
     designation: "Production Designer",
   },
   {
-    id: 5,
+    id: 8,
     title: "Mothers Recipe",
     category: "Ads",
     date: "24.07.2024",
@@ -192,7 +274,7 @@ export const projects = [
     designation: "Production Designer",
   },
   {
-    id: 6,
+    id: 9,
     title: "Sansui AC",
     category: "Ads",
     date: "03.02.2024",
@@ -204,7 +286,7 @@ export const projects = [
     designation: "Production Designer",
   },
   {
-    id: 7,
+    id: 10,
     title: "Volkswagen Diwali",
     category: "Ads",
     date: "01.01.2024",
@@ -216,7 +298,7 @@ export const projects = [
     designation: "Production Designer",
   },
   {
-    id: 8,
+    id: 11,
     title: "Fitbit",
     category: "Ads",
     date: "18.02.2024",
@@ -228,7 +310,7 @@ export const projects = [
     designation: "Production Designer",
   },
   {
-    id: 9,
+    id: 12,
     title: "3M Science",
     category: "Ads",
     date: "05.01.2024",
@@ -251,6 +333,18 @@ export const projects = [
     productionHouse: "Sunshine Motion Pictures",
     director: "Heem Verma",
     Cinematographer: "Vishnu Dev",
+    designation: "Production Designer",
+  },
+  {
+    id: 2,
+    title: "Nafrat - Darshan Rawal",
+    category: "Music Video",
+    date: "21.06.2024",
+    details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    logo: null,
+    productionHouse: "Quercus Production",
+    director: "Sharic Sequeira",
+    Cinematographer: "Shlok Ahuja",
     designation: "Production Designer",
   },
 
@@ -368,7 +462,47 @@ export const projects = [
 // Project-specific media content using category + id as key
 export const projectSpecificContent = {
   // 01. ADS CATEGORY
+  // projectSpecificContent (Ads section)
   Ads_1: [
+    // California Almonds - Diwali
+    // { type: "drive-video", src: "PLACEHOLDER_ID_1", span: true }, // Keep drive video if needed, or switch to local: { type: "video", src: vid0_1_01c, span: true },
+    { type: "video", src: vid0_1_01c, span: true },
+    { type: "image", src: img0_1_01l, span: false },
+    { type: "image", src: img0_1_01r, span: false },
+    { type: "image", src: img0_1_02l, span: false },
+    { type: "image", src: img0_1_02r, span: false },
+  ],
+  Ads_2: [
+    // Dot and Key
+    // { type: "drive-video", src: "PLACEHOLDER_ID_2", span: true }, // Keep drive video if needed, or switch to local: { type: "video", src: vid0_2_01c, span: true },
+    { type: "image", src: img0_2_01l, span: false },
+    { type: "image", src: img0_2_01r, span: false },
+    { type: "image", src: img0_2_02l, span: false },
+    { type: "image", src: img0_2_02r, span: false },
+    { type: "image", src: img0_2_03l, span: false },
+    { type: "image", src: img0_2_03r, span: false },
+    { type: "image", src: img0_2_04l, span: false },
+    { type: "image", src: img0_2_04r, span: false },
+  ],
+  Ads_3: [
+    // JIO PC
+    { type: "video", src: vid0_3_01c, span: true },
+    { type: "image", src: img0_3_01l, span: false },
+    { type: "image", src: img0_3_01r, span: false },
+    { type: "image", src: img0_3_02l, span: false },
+    { type: "image", src: img0_3_02r, span: false },
+    { type: "image", src: img0_3_03c, span: true },
+    { type: "image", src: img0_3_04l, span: false },
+    { type: "image", src: img0_3_04r, span: false },
+    { type: "image", src: img0_3_05l, span: false },
+    { type: "image", src: img0_3_05r, span: false },
+    { type: "video", src: vid0_3_06c, span: true },
+    { type: "image", src: img0_3_06l, span: false },
+    { type: "image", src: img0_3_06r, span: false },
+    { type: "image", src: img0_3_07l, span: false },
+    { type: "image", src: img0_3_07r, span: false },
+  ],
+  Ads_4: [
     // CTRL + ALT + DELETE
     { type: "video", src: vid0101c, span: true },
     { type: "image", src: img0101l, span: false },
@@ -378,7 +512,7 @@ export const projectSpecificContent = {
     { type: "image", src: img0103l, span: false },
     { type: "image", src: img0103r, span: false },
   ],
-  Ads_2: [
+  Ads_5: [
     // Superdry Denim
     { type: "video", src: vid0201c, span: true },
     { type: "image", src: img0201l, span: false },
@@ -393,7 +527,7 @@ export const projectSpecificContent = {
     { type: "image", src: img0205r, span: false },
     { type: "image", src: img0206c, span: true },
   ],
-  Ads_3: [
+  Ads_6: [
     // Spotify
     { type: "video", src: vid0401c, span: true },
     { type: "image", src: img0401l, span: false },
@@ -405,7 +539,7 @@ export const projectSpecificContent = {
     { type: "image", src: img0404l, span: false },
     { type: "image", src: img0404r, span: false },
   ],
-  Ads_4: [
+  Ads_7: [
     // Jio 45th Annual Meeting
     { type: "image", src: img0701l, span: false },
     { type: "image", src: img0701r, span: false },
@@ -416,7 +550,7 @@ export const projectSpecificContent = {
     { type: "image", src: img0704l, span: false },
     { type: "image", src: img0704r, span: false },
   ],
-  Ads_5: [
+  Ads_8: [
     // Mothers Recipe
     { type: "video", src: vid0501c, span: true },
     { type: "image", src: img0501l, span: false },
@@ -426,7 +560,7 @@ export const projectSpecificContent = {
     { type: "image", src: img0503l, span: false },
     { type: "image", src: img0503r, span: false },
   ],
-  Ads_6: [
+  Ads_9: [
     // Sansui AC
     { type: "video", src: vid0601c, span: true },
     { type: "image", src: img0601l, span: false },
@@ -436,7 +570,7 @@ export const projectSpecificContent = {
     { type: "image", src: img0603l, span: false },
     { type: "image", src: img0603r, span: false },
   ],
-  Ads_7: [
+  Ads_10: [
     // Volkswagen Diwali
     { type: "video", src: vid0301c, span: true },
     { type: "image", src: img0301l, span: false },
@@ -446,7 +580,7 @@ export const projectSpecificContent = {
     { type: "image", src: img0302r, span: false },
     { type: "video", src: vid0303c, span: true },
   ],
-  Ads_8: [
+  Ads_11: [
     // Fitbit
     { type: "video", src: vid0801c, span: true },
     { type: "image", src: img0801l, span: false },
@@ -454,13 +588,13 @@ export const projectSpecificContent = {
     { type: "image", src: img0802l, span: false },
     { type: "image", src: img0802r, span: false },
   ],
-  Ads_9: [
+  Ads_12: [
     // 3M Science
     { type: "video", src: vid0901c, span: true },
     { type: "image", src: img0901c, span: false },
     { type: "image", src: img0902l, span: false },
     { type: "image", src: img0902r, span: false },
-    { type: "image", src: img0903c, span: true },
+    { type: "image", src: img0903c, span: false },
   ],
 
   // 02. MUSIC VIDEO CATEGORY
@@ -476,6 +610,21 @@ export const projectSpecificContent = {
     { type: "image", src: img1105l, span: false },
     { type: "image", src: img1105r, span: false },
     { type: "image", src: img1106c, span: true },
+  ],
+
+  "Music Video_2": [
+    // Nafrat - Darshan Rawal
+    { type: "image", src: img_mv_02_01l, span: false },
+    { type: "image", src: img_mv_02_01r, span: false },
+    { type: "image", src: img_mv_02_02l, span: false },
+    { type: "image", src: img_mv_02_02r, span: false },
+    { type: "image", src: img_mv_02_03c, span: true },
+    { type: "image", src: img_mv_02_04l, span: false },
+    { type: "image", src: img_mv_02_04r, span: false },
+    { type: "image", src: img_mv_02_05l, span: false },
+    { type: "image", src: img_mv_02_05r, span: false },
+    { type: "image", src: img_mv_02_06l, span: false },
+    { type: "image", src: img_mv_02_06r, span: false },
   ],
 
   // 03. LONG FORMAT CATEGORY - No media yet
