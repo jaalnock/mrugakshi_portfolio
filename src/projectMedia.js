@@ -8,7 +8,7 @@ import img0103r from "./assets/images/01/3r.webp";
 // import logo01 from "./assets/logos/01.png";
 
 // Imports for new Ads projects
-// import vid0_1_01c from "./assets/videos/0.1/1c.mp4";
+import vid0_1_01c from "./assets/videos/0.1/1c.mp4";
 import img0_1_01l from "./assets/images/0.1/1l.webp";
 import img0_1_01r from "./assets/images/0.1/1r.webp";
 import img0_1_02l from "./assets/images/0.1/2l.webp";
@@ -466,7 +466,7 @@ export const projectSpecificContent = {
   Ads_1: [
     // California Almonds - Diwali
     // { type: "drive-video", src: "PLACEHOLDER_ID_1", span: true }, // Keep drive video if needed, or switch to local: { type: "video", src: vid0_1_01c, span: true },
-    // { type: "video", src: vid0_1_01c, span: true },
+    { type: "video", src: vid0_1_01c, span: true },
     { type: "image", src: img0_1_01l, span: false },
     { type: "image", src: img0_1_01r, span: false },
     { type: "image", src: img0_1_02l, span: false },
