@@ -7,6 +7,56 @@ import img0103l from "./assets/images/01/3l.webp";
 import img0103r from "./assets/images/01/3r.webp";
 // import logo01 from "./assets/logos/01.png";
 
+// Imports for Ads 14 (Cetaphil)
+import vid1401c from "./assets/videos/14/1c.mp4";
+import img1401l from "./assets/images/14/1l.jpg";
+import img1401r from "./assets/images/14/1r.jpg";
+import img1402l from "./assets/images/14/2l.jpg";
+import img1402r from "./assets/images/14/2r.jpg";
+import img1403l from "./assets/images/14/3l.jpg";
+import img1403r from "./assets/images/14/3r.jpg";
+import img1404l from "./assets/images/14/4l.jpg";
+import img1404r from "./assets/images/14/4r.jpg";
+
+// Imports for Ads 15 (Sweet C)
+import vid1501c from "./assets/videos/15/1c.mov";
+import vid1502c from "./assets/videos/15/2c.mov";
+import vid1503c from "./assets/videos/15/3c.mov";
+import img1501l from "./assets/images/15/1l.jpeg";
+import img1501r from "./assets/images/15/1r.jpeg";
+import img1502l from "./assets/images/15/2l.jpeg";
+import img1502r from "./assets/images/15/2r.jpeg";
+import img1503l from "./assets/images/15/3l.jpeg";
+
+// Imports for Ads 16 (Fable and Mane)
+import vid1601c from "./assets/videos/16/1c.mp4";
+import img1601c from "./assets/images/16/1c.jpeg";
+import img1602l from "./assets/images/16/2l.jpeg";
+import img1602r from "./assets/images/16/2r.jpeg";
+import img1603l from "./assets/images/16/3l.jpeg";
+import img1603r from "./assets/images/16/3r.jpeg";
+import img1604c from "./assets/images/16/4c.jpeg";
+import img1605l from "./assets/images/16/5l.jpeg";
+import img1605r from "./assets/images/16/5r.jpeg";
+import img1606l from "./assets/images/16/6l.jpeg";
+import img1606r from "./assets/images/16/6r.jpeg";
+import img1607c from "./assets/images/16/7c.jpeg";
+
+// Imports for Ads 17 (IPL Google Search AI)
+import vid1701c from "./assets/videos/17/1c.mp4";
+import vid1702c from "./assets/videos/17/2c.mp4";
+import img1701l from "./assets/images/17/1l.jpeg";
+import img1701r from "./assets/images/17/1r.jpeg";
+import img1702l from "./assets/images/17/2l.jpeg";
+import img1702r from "./assets/images/17/2r.png";
+
+// Imports for Ads 18 (IPL Google Pay KKR)
+import vid1801c from "./assets/videos/18/1c.mp4";
+import img1801l from "./assets/images/18/1l.jpeg";
+import img1801r from "./assets/images/18/1r.jpeg";
+import img1802l from "./assets/images/18/2l.jpeg";
+import img1802r from "./assets/images/18/2r.jpeg";
+
 // Imports for Ads 13 (California Almonds New Year)
 import vid1301c from "./assets/videos/13/1c.mp4";
 import img1301l from "./assets/images/13/1l.jpeg";
@@ -186,6 +236,66 @@ import img_mv_02_06r from "./assets/images/mv_02/6r.jpeg";
 // Define project data array
 export const projects = [
   // 01. ADS CATEGORY
+  {
+    id: 14,
+    title: "Cetaphil",
+    category: "Ads",
+    date: "2025",
+    details: "",
+    logo: null,
+    productionHouse: "Kaarman Line Production",
+    director: "Sharic Sequeira",
+    Cinematographer: "Shlok Ahuja",
+    designation: "Production Designer",
+  },
+  {
+    id: 15,
+    title: "Sweet C",
+    category: "Ads",
+    date: "2025",
+    details: "",
+    logo: null,
+    productionHouse: "Avinash Gowarikar Production",
+    director: "Sharic Sequeira",
+    Cinematographer: "Shlok Ahuja",
+    designation: "Production Designer",
+  },
+  {
+    id: 16,
+    title: "Fable and Mane",
+    category: "Ads",
+    date: "2025",
+    details: "",
+    logo: null,
+    productionHouse: "Jouska Production",
+    director: "Kaushal Shah",
+    Cinematographer: "Kaushal Shah",
+    designation: "Production Designer",
+  },
+  {
+    id: 17,
+    title: "IPL Google Search AI",
+    category: "Ads",
+    date: "2025",
+    details: "",
+    logo: null,
+    productionHouse: "",
+    director: "",
+    Cinematographer: "",
+    designation: "",
+  },
+  {
+    id: 18,
+    title: "IPL Google Pay KKR",
+    category: "Ads",
+    date: "2025",
+    details: "",
+    logo: null,
+    productionHouse: "",
+    director: "",
+    Cinematographer: "",
+    designation: "",
+  },
   {
     id: 13,
     title: "California Almonds New Year",
@@ -483,6 +593,61 @@ export const projects = [
 // Project-specific media content using category + id as key
 export const projectSpecificContent = {
   // 01. ADS CATEGORY
+  Ads_14: [
+    // Cetaphil
+    { type: "video", src: vid1401c, span: true },
+    { type: "image", src: img1401l, span: false },
+    { type: "image", src: img1401r, span: false },
+    { type: "image", src: img1402l, span: false },
+    { type: "image", src: img1402r, span: false },
+    { type: "image", src: img1403l, span: false },
+    { type: "image", src: img1403r, span: false },
+    { type: "image", src: img1404l, span: false },
+    { type: "image", src: img1404r, span: false },
+  ],
+  Ads_15: [
+    // Sweet C
+    { type: "video", src: vid1501c, span: true },
+    { type: "image", src: img1501l, span: false },
+    { type: "image", src: img1501r, span: false },
+    { type: "video", src: vid1502c, span: true },
+    { type: "image", src: img1502l, span: false },
+    { type: "image", src: img1502r, span: false },
+    { type: "video", src: vid1503c, span: true },
+    { type: "image", src: img1503l, span: false },
+  ],
+  Ads_16: [
+    // Fable and Mane
+    { type: "video", src: vid1601c, span: true },
+    { type: "image", src: img1601c, span: true },
+    { type: "image", src: img1602l, span: false },
+    { type: "image", src: img1602r, span: false },
+    { type: "image", src: img1603l, span: false },
+    { type: "image", src: img1603r, span: false },
+    { type: "image", src: img1604c, span: true },
+    { type: "image", src: img1605l, span: false },
+    { type: "image", src: img1605r, span: false },
+    { type: "image", src: img1606l, span: false },
+    { type: "image", src: img1606r, span: false },
+    { type: "image", src: img1607c, span: true },
+  ],
+  Ads_17: [
+    // IPL Google Search AI
+    { type: "video", src: vid1701c, span: true },
+    { type: "image", src: img1701l, span: false },
+    { type: "image", src: img1701r, span: false },
+    { type: "video", src: vid1702c, span: true },
+    { type: "image", src: img1702l, span: false },
+    { type: "image", src: img1702r, span: false },
+  ],
+  Ads_18: [
+    // IPL Google Pay KKR
+    { type: "video", src: vid1801c, span: true },
+    { type: "image", src: img1801l, span: false },
+    { type: "image", src: img1801r, span: false },
+    { type: "image", src: img1802l, span: false },
+    { type: "image", src: img1802r, span: false },
+  ],
   Ads_13: [
     // California Almonds New Year
     { type: "video", src: vid1301c, span: true },
