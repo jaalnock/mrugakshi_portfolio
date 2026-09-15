@@ -7,7 +7,7 @@ const ProjectTimeline = ({
   handleProjectClick,
   isMobile,
 }) => {
-  // Group projects by category and sort by ID
+  // Group projects by category, preserving order from projectMedia.js
   const groupedProjects = projects.reduce((acc, project) => {
     if (!acc[project.category]) {
       acc[project.category] = [];
@@ -16,10 +16,9 @@ const ProjectTimeline = ({
     return acc;
   }, {});
 
-  // Sort projects within each category by ID
-  Object.keys(groupedProjects).forEach(category => {
-    groupedProjects[category].sort((a, b) => a.id - b.id);
-  });
+  const isSelected = (project) =>
+    selectedProject?.id === project.id &&
+    selectedProject?.category === project.category;
 
   const categories = ["Ads", "Music Video", "Long Format", "Short Films"];
 
@@ -59,17 +58,17 @@ const ProjectTimeline = ({
                       </h2>
                     </div>
                     {groupedProjects[category].map((project, index) => (
-                      <div key={project.id} className="project-item">
+                      <div key={`${project.category}_${project.id}`} className="project-item">
                         <span
                           className={`project-number${
-                            selectedProject?.id === project.id ? " selected" : ""
+                            isSelected(project) ? " selected" : ""
                           }`}
                         >
-                          {String(project.id).padStart(2, "0")}
+                          {String(index + 1).padStart(2, "0")}
                         </span>
                         <div
                           className={`project-details${
-                            selectedProject?.id === project.id ? " selected" : ""
+                            isSelected(project) ? " selected" : ""
                           }`}
                           onClick={() => handleProjectClick(project)}
                         >
@@ -103,22 +102,22 @@ const ProjectTimeline = ({
                     </div>
                     {groupedProjects[category].map((project, index) => (
                       <motion.div
-                        key={project.id}
+                        key={`${project.category}_${project.id}`}
                         whileHover={{ scale: 1.02 }}
                         className="project-item cursor-pointer flex items-start"
                         onClick={() => handleProjectClick(project)}
                       >
                         <div
                           className={`project-number ${
-                            selectedProject?.id === project.id ? "selected" : ""
+                            isSelected(project) ? "selected" : ""
                           }`}
                           style={{ flexShrink: 0 }}
                         >
-                          {String(project.id).padStart(2, "0")}
+                          {String(index + 1).padStart(2, "0")}
                         </div>
                         <div
                           className={`project-details ${
-                            selectedProject?.id === project.id ? "selected" : ""
+                            isSelected(project) ? "selected" : ""
                           }`}
                           style={{ marginLeft: "0.5vw" }}
                         >

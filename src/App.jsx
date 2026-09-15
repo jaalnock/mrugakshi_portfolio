@@ -17,8 +17,6 @@ const App = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [mediaLoadStates, setMediaLoadStates] = useState([]);
 
-  const sortedProjects = [...projects].sort((a, b) => b.id - a.id);
-
   // Memoize mediaContent to ensure stable reference
   const mediaContent = useMemo(
     () =>
@@ -80,7 +78,7 @@ const App = () => {
             setSelectedImageIndex={setSelectedImageIndex}
             setIsVideoModalOpen={setIsVideoModalOpen}
             setIsImageModalOpen={setIsImageModalOpen}
-            sortedProjects={sortedProjects}
+            projects={projects}
             handleProjectClick={handleProjectClick}
           />
         ) : (
@@ -93,7 +91,7 @@ const App = () => {
             setSelectedImageIndex={setSelectedImageIndex}
             setIsVideoModalOpen={setIsVideoModalOpen}
             setIsImageModalOpen={setIsImageModalOpen}
-            sortedProjects={sortedProjects}
+            projects={projects}
             handleProjectClick={handleProjectClick}
             projectTimelineIcon={projectTimelineIcon}
           />
@@ -147,7 +145,7 @@ const MobileLayout = ({
   setSelectedImageIndex,
   setIsVideoModalOpen,
   setIsImageModalOpen,
-  sortedProjects,
+  projects,
   handleProjectClick,
 }) => (
   <div className="content-container">
@@ -171,7 +169,7 @@ const MobileLayout = ({
         </AnimatePresence>
       </div>
       <ProjectTimeline
-        projects={sortedProjects}
+        projects={projects}
         selectedProject={selectedProject}
         handleProjectClick={handleProjectClick}
         isMobile={true}
@@ -189,7 +187,7 @@ const DesktopLayout = ({
   setSelectedImageIndex,
   setIsVideoModalOpen,
   setIsImageModalOpen,
-  sortedProjects,
+  projects,
   handleProjectClick,
   projectTimelineIcon,
 }) => (
@@ -218,7 +216,7 @@ const DesktopLayout = ({
       </AnimatePresence>
     </motion.section>
     <ProjectTimeline
-      projects={sortedProjects}
+      projects={projects}
       selectedProject={selectedProject}
       handleProjectClick={handleProjectClick}
       isMobile={false}

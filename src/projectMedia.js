@@ -7,6 +7,15 @@ import img0103l from "./assets/images/01/3l.webp";
 import img0103r from "./assets/images/01/3r.webp";
 // import logo01 from "./assets/logos/01.png";
 
+// Imports for Ads 13 (California Almonds New Year)
+import vid1301c from "./assets/videos/13/1c.mp4";
+import img1301l from "./assets/images/13/1l.jpeg";
+import img1301r from "./assets/images/13/1r.jpeg";
+import img1302l from "./assets/images/13/2l.jpeg";
+import img1302r from "./assets/images/13/2r.jpeg";
+import img1303l from "./assets/images/13/3l.jpeg";
+import img1303r from "./assets/images/13/3r.jpeg";
+
 // Imports for new Ads projects
 // import vid0_1_01c from "./assets/videos/0.1/1c.mp4";
 import img0_1_01l from "./assets/images/0.1/1l.webp";
@@ -177,6 +186,18 @@ import img_mv_02_06r from "./assets/images/mv_02/6r.jpeg";
 // Define project data array
 export const projects = [
   // 01. ADS CATEGORY
+  {
+    id: 13,
+    title: "California Almonds New Year",
+    category: "Ads",
+    date: "2025",
+    details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    logo: null,
+    productionHouse: "Cutting Crew Studio",
+    director: "Sharic Sequeira",
+    Cinematographer: "Shlok Ahuja",
+    designation: "Production Designer",
+  },
   {
     id: 1,
     title: "California Almonds - Diwali",
@@ -462,7 +483,16 @@ export const projects = [
 // Project-specific media content using category + id as key
 export const projectSpecificContent = {
   // 01. ADS CATEGORY
-  // projectSpecificContent (Ads section)
+  Ads_13: [
+    // California Almonds New Year
+    { type: "video", src: vid1301c, span: true },
+    { type: "image", src: img1301l, span: false },
+    { type: "image", src: img1301r, span: false },
+    { type: "image", src: img1302l, span: false },
+    { type: "image", src: img1302r, span: false },
+    { type: "image", src: img1303l, span: false },
+    { type: "image", src: img1303r, span: false },
+  ],
   Ads_1: [
     // California Almonds - Diwali
     // { type: "drive-video", src: "PLACEHOLDER_ID_1", span: true }, // Keep drive video if needed, or switch to local: { type: "video", src: vid0_1_01c, span: true },
