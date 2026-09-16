@@ -636,9 +636,9 @@ export const projectSpecificContent = {
     { type: "video", src: vid1701c, span: true },
     { type: "image", src: img1701l, span: false },
     { type: "image", src: img1701r, span: false },
-    { type: "video", src: vid1702c, span: true },
     { type: "image", src: img1702l, span: false },
     { type: "image", src: img1702r, span: false },
+    { type: "video", src: vid1702c, span: true },
   ],
   Ads_18: [
     // IPL Google Pay KKR
