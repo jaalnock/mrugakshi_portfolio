@@ -40,7 +40,6 @@ import img1605l from "./assets/images/16/5l.jpeg";
 import img1605r from "./assets/images/16/5r.jpeg";
 import img1606l from "./assets/images/16/6l.jpeg";
 import img1606r from "./assets/images/16/6r.jpeg";
-import img1607c from "./assets/images/16/7c.jpeg";
 
 // Imports for Ads 17 (IPL Google Search AI)
 import vid1701c from "./assets/videos/17/1c.mp4";
@@ -629,7 +628,6 @@ export const projectSpecificContent = {
     { type: "image", src: img1605r, span: false },
     { type: "image", src: img1606l, span: false },
     { type: "image", src: img1606r, span: false },
-    { type: "image", src: img1607c, span: true },
   ],
   Ads_17: [
     // IPL Google Search AI
